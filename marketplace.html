@@ -126,9 +126,32 @@
 </nav>
 
 <!-- MAIN CONTENT -->
-<main class="min-h-screen pt-20">
+<main>
 
-  <!-- HERO: split layout matching live site -->
+  <!-- HERO: full-bleed image -->
+  <header class="relative min-h-screen flex items-end pb-24 pt-20 overflow-hidden bg-surface-container-lowest">
+    <div class="absolute inset-0 z-0">
+      <img class="w-full h-full object-cover opacity-75" src="marketplace_hero.png" alt="Aerial city grid at night — distributed edge network"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#060e20] via-[#060e20]/80 to-[#060e20]/20"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#060e20] via-transparent to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-[1440px] mx-auto px-8 w-full">
+      <div class="inline-flex items-center gap-3 mb-8">
+        <span class="w-12 h-[2px] bg-tertiary"></span>
+        <span class="font-label text-[10px] uppercase tracking-[0.3em] text-tertiary font-bold">Edge &amp; Regional</span>
+      </div>
+      <h1 class="font-headline text-[3.5rem] md:text-[5.5rem] leading-[1.05] tracking-tighter text-on-surface mb-6">Marketplace</h1>
+      <p class="max-w-2xl font-body text-xl text-on-surface-variant leading-relaxed">
+        While hyperscale data centers dominate headlines, there is also substantial demand for edge and regional data center capacity.
+      </p>
+    </div>
+    <div class="absolute bottom-12 right-8 flex items-center gap-4 z-10">
+      <div class="font-label text-[10px] uppercase tracking-widest text-outline">Distributed Compute</div>
+      <div class="w-2 h-2 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_#3cd7ff]"></div>
+    </div>
+  </header>
+
+  <!-- BODY: split layout with copy + network map -->
   <section class="min-h-screen flex items-center">
     <div class="max-w-[1440px] mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center py-24">
 
