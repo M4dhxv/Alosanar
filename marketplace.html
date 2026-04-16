@@ -152,116 +152,105 @@
   </header>
 
   <!-- BODY: split layout with copy + network map -->
-  <section class="min-h-screen flex items-center">
-    <div class="max-w-[1440px] mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center py-24">
-
-      <!-- Left: title + copy -->
-      <div>
-        <p class="font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.3em] text-tertiary mb-6 font-bold">Marketplace</p>
-        <h1 class="font-headline text-[3rem] md:text-[4rem] leading-[1.1] font-bold tracking-tighter text-on-surface mb-10">
-          Marketplace
-        </h1>
-        <p class="font-body text-lg text-on-surface-variant leading-relaxed max-w-xl">
-          While hyperscale data centers dominate headlines, there is also substantial demand for edge and regional data center capacity to support AI inference, data privacy requirements, and low-latency performance for real-time applications such as autonomous systems, robotics, financial services, video analytics, healthcare, government workloads, and 5G/6G networks.
-        </p>
-      </div>
-
-      <!-- Right: abstract network map SVG -->
-      <div class="flex items-center justify-center">
-        <div class="w-full max-w-lg relative">
-          <!-- Glow blob behind map -->
-          <div class="absolute inset-0 rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(60,215,255,0.08)_0%,_transparent_70%)] blur-2xl"></div>
-          <!-- Inline SVG: abstract US network map with nodes -->
-          <svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto network-glow" aria-label="US edge data center network map">
-            <!-- US outline (simplified) -->
-            <path d="M 80 140 L 120 100 L 200 95 L 280 80 L 380 70 L 460 75 L 520 90 L 590 100 L 640 120 L 680 150 L 700 200 L 710 260 L 690 320 L 650 370 L 580 400 L 500 420 L 420 430 L 340 440 L 260 430 L 190 410 L 130 380 L 90 330 L 70 270 L 75 200 Z"
-              fill="none" stroke="rgba(173,198,255,0.12)" stroke-width="1.5"/>
-            <!-- State border texture lines -->
-            <path d="M 200 95 L 210 200 L 250 280" fill="none" stroke="rgba(173,198,255,0.07)" stroke-width="1"/>
-            <path d="M 380 70 L 370 180 L 380 300" fill="none" stroke="rgba(173,198,255,0.07)" stroke-width="1"/>
-            <path d="M 520 90 L 510 200 L 520 330" fill="none" stroke="rgba(173,198,255,0.07)" stroke-width="1"/>
-            <path d="M 80 230 L 710 230" fill="none" stroke="rgba(173,198,255,0.05)" stroke-width="1"/>
-            <path d="M 80 310 L 680 310" fill="none" stroke="rgba(173,198,255,0.05)" stroke-width="1"/>
-
-            <!-- Connection lines between nodes -->
-            <line x1="180" y1="170" x2="320" y2="140" stroke="rgba(60,215,255,0.25)" stroke-width="1"/>
-            <line x1="320" y1="140" x2="480" y2="130" stroke="rgba(60,215,255,0.25)" stroke-width="1"/>
-            <line x1="480" y1="130" x2="600" y2="175" stroke="rgba(60,215,255,0.20)" stroke-width="1"/>
-            <line x1="180" y1="170" x2="260" y2="290" stroke="rgba(173,198,255,0.20)" stroke-width="1"/>
-            <line x1="260" y1="290" x2="390" y2="310" stroke="rgba(173,198,255,0.20)" stroke-width="1"/>
-            <line x1="390" y1="310" x2="500" y2="280" stroke="rgba(173,198,255,0.20)" stroke-width="1"/>
-            <line x1="500" y1="280" x2="600" y2="175" stroke="rgba(60,215,255,0.15)" stroke-width="1"/>
-            <line x1="320" y1="140" x2="390" y2="310" stroke="rgba(173,198,255,0.12)" stroke-width="1" stroke-dasharray="4,4"/>
-            <line x1="480" y1="130" x2="500" y2="280" stroke="rgba(173,198,255,0.12)" stroke-width="1" stroke-dasharray="4,4"/>
-            <line x1="260" y1="290" x2="200" y2="370" stroke="rgba(173,198,255,0.15)" stroke-width="1"/>
-            <line x1="390" y1="310" x2="370" y2="390" stroke="rgba(173,198,255,0.15)" stroke-width="1"/>
-            <line x1="500" y1="280" x2="540" y2="370" stroke="rgba(173,198,255,0.15)" stroke-width="1"/>
-
-            <!-- Network nodes -->
-            <!-- Seattle -->
-            <circle cx="140" cy="135" r="5" fill="#3cd7ff" opacity="0.9"/>
-            <circle cx="140" cy="135" r="10" fill="#3cd7ff" opacity="0.15"/>
-
-            <!-- Portland -->
-            <circle cx="180" cy="170" r="4" fill="#adc6ff" opacity="0.8"/>
-            <circle cx="180" cy="170" r="8" fill="#adc6ff" opacity="0.12"/>
-
-            <!-- San Francisco -->
-            <circle cx="155" cy="250" r="6" fill="#3cd7ff" opacity="0.9"/>
-            <circle cx="155" cy="250" r="12" fill="#3cd7ff" opacity="0.15"/>
-
-            <!-- Los Angeles -->
-            <circle cx="185" cy="330" r="5" fill="#adc6ff" opacity="0.8"/>
-
-            <!-- Phoenix -->
-            <circle cx="230" cy="340" r="4" fill="#adc6ff" opacity="0.7"/>
-
-            <!-- Denver -->
-            <circle cx="320" cy="240" r="4" fill="#adc6ff" opacity="0.7"/>
-
-            <!-- Dallas -->
-            <circle cx="390" cy="360" r="5" fill="#adc6ff" opacity="0.8"/>
-            <circle cx="390" cy="360" r="10" fill="#adc6ff" opacity="0.12"/>
-
-            <!-- Chicago -->
-            <circle cx="480" cy="200" r="6" fill="#3cd7ff" opacity="0.9"/>
-            <circle cx="480" cy="200" r="12" fill="#3cd7ff" opacity="0.15"/>
-
-            <!-- Minneapolis -->
-            <circle cx="440" cy="150" r="4" fill="#adc6ff" opacity="0.7"/>
-
-            <!-- Atlanta -->
-            <circle cx="530" cy="320" r="5" fill="#adc6ff" opacity="0.8"/>
-
-            <!-- New York -->
-            <circle cx="620" cy="170" r="7" fill="#3cd7ff" opacity="0.9"/>
-            <circle cx="620" cy="170" r="14" fill="#3cd7ff" opacity="0.15"/>
-
-            <!-- Washington DC -->
-            <circle cx="600" cy="220" r="5" fill="#adc6ff" opacity="0.8"/>
-
-            <!-- Miami -->
-            <circle cx="560" cy="400" r="4" fill="#adc6ff" opacity="0.7"/>
-
-            <!-- Boston -->
-            <circle cx="645" cy="140" r="4" fill="#adc6ff" opacity="0.7"/>
-
-            <!-- Portland ME label dots -->
-            <circle cx="320" cy="140" r="4" fill="#adc6ff" opacity="0.7"/>
-
-            <!-- Hawaii (inset) -->
-            <circle cx="155" cy="430" r="3" fill="#3cd7ff" opacity="0.6"/>
-            <circle cx="175" cy="445" r="2.5" fill="#adc6ff" opacity="0.5"/>
-            <line x1="155" y1="430" x2="175" y2="445" stroke="rgba(60,215,255,0.2)" stroke-width="0.8"/>
-
-            <!-- Alaska (inset) -->
-            <circle cx="100" cy="430" r="3" fill="#3cd7ff" opacity="0.5"/>
-            <circle cx="110" cy="445" r="2" fill="#adc6ff" opacity="0.4"/>
-          </svg>
+  <!-- BODY: copy + proper map -->
+  <section class="py-24 bg-surface border-b border-outline-variant/10">
+    <div class="max-w-[1440px] mx-auto px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <!-- Left: text -->
+        <div class="lg:pt-8">
+          <span class="font-label text-[10px] uppercase tracking-[0.3em] text-tertiary mb-6 block font-bold">Edge & Regional</span>
+          <h2 class="font-headline text-4xl md:text-5xl leading-tight tracking-tighter text-on-surface mb-8">The Case for Edge</h2>
+          <p class="font-body text-lg text-on-surface-variant leading-relaxed">
+            While hyperscale data centers dominate headlines, there is also substantial demand for edge and regional data center capacity to support AI inference, data privacy requirements, and low-latency performance for real-time applications such as autonomous systems, robotics, financial services, video analytics, healthcare, government workloads, and 5G/6G networks.
+          </p>
+        </div>
+        <!-- Right: Leaflet map -->
+        <div class="relative">
+          <div id="dc-map" style="height:480px;border-radius:12px;overflow:hidden;"></div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Leaflet CSS + JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var map = L.map('dc-map', {
+        center: [38.5, -96],
+        zoom: 4,
+        zoomControl: true,
+        scrollWheelZoom: false,
+        attributionControl: false
+      });
+
+      // Dark tile layer (CartoDB Dark Matter)
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        maxZoom: 19
+      }).addTo(map);
+
+      // Custom marker icon
+      function makeIcon(color, size) {
+        return L.divIcon({
+          className: '',
+          html: '<div style="width:' + size + 'px;height:' + size + 'px;background:' + color + ';border-radius:50%;box-shadow:0 0 ' + (size*2) + 'px ' + color + ';border:2px solid rgba(255,255,255,0.3);"></div>',
+          iconSize: [size, size],
+          iconAnchor: [size/2, size/2],
+          popupAnchor: [0, -size/2]
+        });
+      }
+
+      var majorIcon = makeIcon('#3cd7ff', 14);
+      var minorIcon = makeIcon('#adc6ff', 9);
+
+      var cities = [
+        // Major hubs
+        { name: 'New York', lat: 40.71, lng: -74.01, major: true },
+        { name: 'Los Angeles', lat: 34.05, lng: -118.24, major: true },
+        { name: 'Chicago', lat: 41.88, lng: -87.63, major: true },
+        { name: 'Dallas', lat: 32.78, lng: -96.80, major: true },
+        { name: 'Northern Virginia', lat: 38.90, lng: -77.04, major: true },
+        { name: 'Seattle', lat: 47.61, lng: -122.33, major: true },
+        { name: 'Atlanta', lat: 33.75, lng: -84.39, major: true },
+        { name: 'San Francisco Bay', lat: 37.77, lng: -122.42, major: true },
+        // Secondary
+        { name: 'Phoenix', lat: 33.45, lng: -112.07, major: false },
+        { name: 'Denver', lat: 39.74, lng: -104.98, major: false },
+        { name: 'Minneapolis', lat: 44.98, lng: -93.27, major: false },
+        { name: 'Kansas City', lat: 39.10, lng: -94.58, major: false },
+        { name: 'Charlotte', lat: 35.23, lng: -80.84, major: false },
+        { name: 'Miami', lat: 25.77, lng: -80.19, major: false },
+        { name: 'Boston', lat: 42.36, lng: -71.06, major: false },
+        { name: 'Detroit', lat: 42.33, lng: -83.05, major: false },
+        { name: 'Portland', lat: 45.52, lng: -122.68, major: false },
+        { name: 'Salt Lake City', lat: 40.76, lng: -111.89, major: false },
+        { name: 'Columbus', lat: 39.96, lng: -82.99, major: false },
+        { name: 'San Antonio', lat: 29.42, lng: -98.49, major: false }
+      ];
+
+      cities.forEach(function(c) {
+        L.marker([c.lat, c.lng], { icon: c.major ? majorIcon : minorIcon })
+          .addTo(map)
+          .bindPopup('<b style="color:#3cd7ff;font-family:Space Grotesk">' + c.name + '</b><br><span style="color:#c1c6d7;font-size:11px">Edge · Regional Capacity</span>', {
+            className: 'dc-popup'
+          });
+      });
+    });
+  </script>
+  <style>
+    .leaflet-container { background: #060e20; font-family: 'Manrope', sans-serif; }
+    .dc-popup .leaflet-popup-content-wrapper {
+      background: #171f33; border: 1px solid rgba(65,71,85,0.5);
+      border-radius: 8px; color: #dae2fd; box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    }
+    .dc-popup .leaflet-popup-tip { background: #171f33; }
+    .leaflet-control-zoom a {
+      background: #171f33 !important; color: #adc6ff !important;
+      border-color: rgba(65,71,85,0.4) !important;
+    }
+  </style>
+
 
   <!-- REFERENCE LINKS GRID (matching live site's link grid) -->
   <section class="py-20 bg-surface-container-lowest relative">
