@@ -1,0 +1,326 @@
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-low": "#131b2e",
+            "on-secondary": "#233144",
+            "tertiary": "#3cd7ff",
+            "outline-variant": "#414755",
+            "secondary-container": "#3c4a5e",
+            "on-primary-fixed": "#001a41",
+            "on-tertiary-container": "#002e3a",
+            "on-secondary-fixed-variant": "#3a485b",
+            "primary-fixed": "#d8e2ff",
+            "inverse-surface": "#dae2fd",
+            "surface-tint": "#adc6ff",
+            "on-primary": "#002e69",
+            "inverse-primary": "#005bc1",
+            "surface-variant": "#2d3449",
+            "on-tertiary-fixed": "#001f27",
+            "on-error-container": "#ffdad6",
+            "primary-container": "#4b8eff",
+            "on-error": "#690005",
+            "tertiary-fixed": "#b4ebff",
+            "surface-container-lowest": "#060e20",
+            "on-primary-container": "#00285c",
+            "surface-dim": "#0b1326",
+            "on-tertiary-fixed-variant": "#004e5f",
+            "primary": "#adc6ff",
+            "tertiary-fixed-dim": "#3cd7ff",
+            "surface-container-high": "#222a3d",
+            "outline": "#8b90a0",
+            "surface": "#0b1326",
+            "on-primary-fixed-variant": "#004493",
+            "secondary-fixed": "#d5e3fc",
+            "on-tertiary": "#003642",
+            "error": "#ffb4ab",
+            "tertiary-container": "#009ebe",
+            "on-background": "#dae2fd",
+            "background": "#0b1326",
+            "inverse-on-surface": "#283044",
+            "surface-container-highest": "#2d3449",
+            "on-surface-variant": "#c1c6d7",
+            "on-surface": "#dae2fd",
+            "on-secondary-container": "#abb9d1",
+            "error-container": "#93000a",
+            "on-secondary-fixed": "#0d1c2e",
+            "surface-container": "#171f33",
+            "secondary": "#b9c7df",
+            "surface-bright": "#31394d",
+            "secondary-fixed-dim": "#b9c7df",
+            "primary-fixed-dim": "#adc6ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "fontFamily": {
+            "headline": ["Space Grotesk"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .monolith-gradient {
+      background: linear-gradient(135deg, #adc6ff 0%, #4b8eff 100%);
+    }
+    .glass-nav {
+      background: rgba(11, 19, 38, 0.6);
+      backdrop-filter: blur(24px);
+    }
+    .text-glow {
+      text-shadow: 0 0 20px rgba(173, 198, 255, 0.3);
+    }
+    body {
+      background-color: #0b1326;
+      color: #dae2fd;
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Section -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(173,198,255,0.05)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-full font-['Space_Grotesk'] tracking-tight">
+<div class="text-2xl font-bold tracking-tighter text-[#adc6ff]">Alosanar</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#414755] hover:text-[#adc6ff] transition-colors" href="#">Home</a>
+<a class="text-[#adc6ff] border-b-2 border-[#adc6ff] pb-1" href="#">Marketplace</a>
+<a class="text-[#414755] hover:text-[#adc6ff] transition-colors" href="#">Operations</a>
+<a class="text-[#414755] hover:text-[#adc6ff] transition-colors" href="#">Services</a>
+<a class="text-[#414755] hover:text-[#adc6ff] transition-colors" href="#">About</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="active:scale-95 transition-transform text-[#adc6ff]">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="monolith-gradient text-on-primary-container px-6 py-2 font-bold hover:opacity-90 transition-all active:scale-95">
+          Contact Us
+        </button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30 mix-blend-luminosity" data-alt="monolithic data center interior with infinite rows of server racks illuminated by cyan LED lights in a deep blue atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsVmn8TIwTZO_Q5D7cxD_JP7V2KCtjgOlzgvM6qSul1UjxYqnpzGxsOGWPOg_5txTuJXcbRcIfm5cmrkGphCIABQ-ifssKfBsQa8ijQrp29Grv_AMNZB58isl2N1KcG_n0uYvgxgq7kpPiI_USMx7o3Mvl9dj5s4YzE8y7rCXR5o_Wnm-zyizTcQqUDFEB-uacNba_Fr0h208eIcg_p5ZKAODt4ytTrgpL5Z8kyPleugtKeWBROEcVdXZdJgxrloCbngHxDVrDc-XT"/>
+<div class="absolute inset-0 bg-gradient-to-b from-[#0b1326]/80 via-[#0b1326]/40 to-[#0b1326]"></div>
+</div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="max-w-5xl">
+<p class="font-label text-tertiary text-sm tracking-[0.3em] uppercase mb-6 flex items-center gap-4">
+<span class="w-12 h-[1px] bg-tertiary/40"></span> Infrastructure as a Service
+          </p>
+<h1 class="font-headline text-[3.5rem] md:text-[6rem] leading-[1.1] font-bold tracking-tighter text-on-surface mb-8 text-glow">
+            Data Center <br/>Solutions Marketplace
+          </h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl font-light leading-relaxed">
+            Accelerating Edge Growth &amp; Infrastructure with precision-engineered capacity for the next generation of global compute.
+          </p>
+<div class="mt-12 flex flex-wrap gap-4">
+<button class="monolith-gradient px-10 py-5 text-on-primary-fixed font-bold tracking-tight active:scale-95 transition-transform">
+              Browse Inventory
+            </button>
+<button class="bg-surface-container-high text-primary px-10 py-5 font-bold tracking-tight hover:bg-surface-bright transition-colors">
+              Technical Specs
+            </button>
+</div>
+</div>
+</div>
+<!-- Asymmetrical Element -->
+<div class="absolute bottom-20 right-0 hidden lg:block w-1/3 h-64 bg-surface-container-low/80 backdrop-blur-md p-8 border-l-4 border-tertiary">
+<div class="flex flex-col h-full justify-between">
+<div class="flex justify-between items-start">
+<span class="font-headline text-3xl font-bold text-primary">01</span>
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">dataset</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold mb-2">Live Capacity</h3>
+<p class="text-sm text-on-surface-variant">Global edge availability tracked in real-time across 42 regional hubs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Market Overview Section -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-8">
+<div class="flex flex-col lg:flex-row gap-20">
+<div class="lg:w-1/2">
+<h2 class="font-headline text-4xl md:text-6xl font-bold tracking-tighter mb-10 text-on-surface leading-none">
+              The Rise of <br/><span class="text-tertiary">Edge Capacity</span>
+</h2>
+<div class="space-y-8 font-body text-lg leading-relaxed text-on-surface-variant">
+<p>
+                While hyperscale data centers dominate headlines, there is also substantial demand for edge and regional data center capacity to support AI inference, data privacy requirements, and low-latency performance.
+              </p>
+<p>
+                The modern ecosystem demands real-time applications such as autonomous systems, robotics, financial services, video analytics, healthcare, government workloads, and 5G/6G networks.
+              </p>
+</div>
+<div class="mt-12 grid grid-cols-2 gap-8">
+<div class="bg-surface-container-low p-8 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary"></div>
+<div class="text-4xl font-headline font-bold text-primary mb-2">40%</div>
+<p class="text-xs font-label text-outline tracking-widest uppercase">Annual Growth Rate</p>
+</div>
+<div class="bg-surface-container-low p-8 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-primary"></div>
+<div class="text-4xl font-headline font-bold text-primary mb-2">&lt;5ms</div>
+<p class="text-xs font-label text-outline tracking-widest uppercase">Target Latency</p>
+</div>
+</div>
+</div>
+<!-- Bento-style Data Visualizations -->
+<div class="lg:w-1/2 grid grid-cols-2 gap-4">
+<div class="col-span-2 bg-surface-container-low p-6 rounded-lg relative min-h-[300px] overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="abstract digital global map with glowing node connection points and data flow lines in deep blue and cyan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALURYOrkyV28GGY1R243HWO5WKYn9h69Keu4xvsF6ezyAP0S5nwbjW3j2h1yyu0RJ1_f1vQSlUzfMHfW0dooxBbDfm_Fmzq9qPlwMw0n4EGOzmh-4jsbRqz4VsxzmKuR7-gYBMkmcEJ5qGDIOt42pCwLP2CBmyYBhgKeq_l45dRoeAKfYafKG7t-4Ugk3pnnvaxs65t6YT73EWXAvSvg0q3VHpXHTvlYkZKQLbBKsRJRRFZlEi9FPez2XvxjttXSjw-2g-5hAJ0W1L"/>
+<div class="relative z-10 flex flex-col justify-between h-full">
+<span class="text-xs font-label tracking-[0.2em] text-tertiary uppercase">Network Density Map</span>
+<div class="bg-[#0b1326]/80 p-4 inline-block self-start backdrop-blur-sm">
+<span class="material-symbols-outlined text-primary">hub</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg">
+<div class="h-32 w-full flex items-end gap-2 mb-4">
+<div class="bg-primary/20 w-full h-1/2"></div>
+<div class="bg-primary/40 w-full h-2/3"></div>
+<div class="bg-primary/60 w-full h-3/4"></div>
+<div class="bg-tertiary w-full h-full"></div>
+</div>
+<p class="text-sm font-label text-on-surface-variant">Capacity Forecast</p>
+</div>
+<div class="bg-surface-container-high p-6 rounded-lg border-l-2 border-tertiary">
+<span class="material-symbols-outlined text-tertiary mb-4">memory</span>
+<p class="text-sm font-body">Optimized for H100/H200 Inference Clusters</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Marketplace Listings/Categories -->
+<section class="py-32 bg-surface-container-lowest">
+<div class="container mx-auto px-8">
+<div class="flex justify-between items-end mb-20">
+<div>
+<p class="text-tertiary font-label tracking-widest uppercase mb-4">Explore Inventory</p>
+<h2 class="font-headline text-5xl font-bold tracking-tighter">Modular Architecture</h2>
+</div>
+<div class="hidden md:block">
+<button class="text-primary flex items-center gap-3 font-bold group">
+              View All Listings <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-surface-container-low p-1 relative min-h-[500px] flex flex-col transition-all hover:bg-surface-container-high">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="modular prefabricated edge data center unit in a sleek metallic finish under professional cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjav23rAG8UE3zW4-RJDrUgo9tRlTvurZgAxmgp7WwMtZzbIk8roJ2fWHCyrMEBApl0jEFRobbnz8JAeQIUk8EIXX8y6QRxRalANF30Rb-jK7N-oTQ9aL3fD4Uf0JHZGlTrZr38Dl65s43bm8I7oqPSPO5VuZXsqp5FRVSUAmCgla6oR-T21CgqfEaQyzIOygPtj3qED1AcaMpZ2bK6mETfOwfxYROjy0btEACC4c5jBpvLHv4G6kb1c2_CJWbBu-V1c1-2nmKOc0T"/>
+<div class="absolute top-4 right-4 bg-tertiary text-on-tertiary-container text-[10px] font-black uppercase px-2 py-1">Active</div>
+</div>
+<div class="p-10 flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-2xl font-bold mb-4">Edge Infrastructure</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed mb-6">
+                  Compact, ultra-efficient modular units designed for immediate deployment at the edge of the network.
+                </p>
+</div>
+<div class="flex items-center justify-between border-t border-outline-variant/20 pt-6">
+<span class="text-xs font-label uppercase tracking-widest text-outline">Tier III+ Standard</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-low p-1 relative min-h-[500px] flex flex-col transition-all hover:bg-surface-container-high">
+<div class="absolute top-0 left-0 w-full h-1 bg-tertiary opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="high-tech AI chip array with blue circuit glow lines in a dark industrial server environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGCTC1qnr4R70NzRFK2GwGeoukV30vdcLwKlwpepVb-bgVrMS4BHU7N5O5b7N6azbhUMJZjcfPnAkZXCX4NUNt5jMJZ97kuUCb7r8N_tiTUXgkKaSNZEFC7qtu2XXaCvmP_E0t5zC13N3AWzkBYTtfeUrRTD_-c6JjKYZmElJTKwHACFRL1atRvKWDaJk-AZ99-XgMp0qlCiFpG_BMu9tkJzbFqkI1tVnxD8_cD0-oTUa6huSvS8Oc7vyMlDK5Ca0unuIunKMhaGVk"/>
+</div>
+<div class="p-10 flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-2xl font-bold mb-4">AI Inference Nodes</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed mb-6">
+                  High-density compute clusters optimized for Large Language Models and real-time visual analytics.
+                </p>
+</div>
+<div class="flex items-center justify-between border-t border-outline-variant/20 pt-6">
+<span class="text-xs font-label uppercase tracking-widest text-outline">Liquid Cooled</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-low p-1 relative min-h-[500px] flex flex-col transition-all hover:bg-surface-container-high">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" data-alt="modern brutalist architecture style building housing a regional data hub at twilight with glowing blue windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD2-eyTXR0Kq34LgEGRAp40gywLQrFzqYBwyMBzw18GWzSPHRk20vZmifayaHFLYl0LwNyFy65kAuyn1v9BFpQ146zNnkzCrlDNw1GFwoNyF93bQO0CcLJ3Irek74MqszvD4a6_cc0GrHkA5fV0Pce-nf4iFr4R_h7ZOZGjFqWJXDsREeBYmQgfqJaOyKDtg0t9NynaDDUdwhySjcPMZUAGT-8Wa9dAU1xXIsp6uAE85WYu2IgTH_xx_akG5cVC5_gHkIXJatfgjQT"/>
+</div>
+<div class="p-10 flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-2xl font-bold mb-4">Regional Hubs</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed mb-6">
+                  Strategic backbone locations providing low-latency interconnects between local edge and core clouds.
+                </p>
+</div>
+<div class="flex items-center justify-between border-t border-outline-variant/20 pt-6">
+<span class="text-xs font-label uppercase tracking-widest text-outline">100Gbps Backbone</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom CTA / Stats -->
+<section class="py-24 bg-surface relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-tertiary/30 to-transparent"></div>
+<div class="container mx-auto px-8">
+<div class="bg-surface-container-high p-12 md:p-20 flex flex-col md:flex-row justify-between items-center gap-12">
+<div class="max-w-xl">
+<h2 class="font-headline text-3xl md:text-5xl font-bold mb-6 leading-tight">Ready to deploy your <span class="text-primary">infrastructure?</span></h2>
+<p class="text-on-surface-variant font-body">Our team of architectural consultants can design a bespoke solution for your specific compute workload requirements.</p>
+</div>
+<button class="monolith-gradient px-12 py-6 text-on-primary-fixed font-black uppercase tracking-widest text-sm hover:shadow-[0_0_30px_rgba(173,198,255,0.4)] transition-all">
+            Inquire Now
+          </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="w-full py-12 px-8 bg-[#0b1326] border-t border-[#414755]/15">
+<div class="container mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-10">
+<div class="text-lg font-black text-[#adc6ff] tracking-tighter">Alosanar</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Manrope'] text-sm uppercase tracking-widest">
+<a class="text-[#414755] hover:text-[#adc6ff] transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-[#414755] hover:text-[#adc6ff] transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-[#414755] hover:text-[#adc6ff] transition-colors opacity-80 hover:opacity-100" href="#">Security Architecture</a>
+<a class="text-[#414755] hover:text-[#adc6ff] transition-colors opacity-80 hover:opacity-100" href="#">Global Network</a>
+</div>
+<div class="text-[#414755] font-['Manrope'] text-[10px] uppercase tracking-widest">
+          © 2024 Alosanar Infrastructure. All rights reserved.
+        </div>
+</div>
+</div>
+</footer>
+</body></html>

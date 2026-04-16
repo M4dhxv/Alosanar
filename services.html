@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#004e5f",
+                        "error-container": "#93000a",
+                        "outline": "#8b90a0",
+                        "on-secondary-container": "#abb9d1",
+                        "secondary-fixed": "#d5e3fc",
+                        "inverse-on-surface": "#283044",
+                        "surface-dim": "#0b1326",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "on-primary-fixed-variant": "#004493",
+                        "on-primary-fixed": "#001a41",
+                        "surface-container": "#171f33",
+                        "on-tertiary-fixed": "#001f27",
+                        "primary": "#adc6ff",
+                        "outline-variant": "#414755",
+                        "on-tertiary": "#003642",
+                        "primary-container": "#4b8eff",
+                        "surface-container-high": "#222a3d",
+                        "tertiary-fixed": "#b4ebff",
+                        "on-surface-variant": "#c1c6d7",
+                        "surface-container-highest": "#2d3449",
+                        "surface-tint": "#adc6ff",
+                        "primary-fixed": "#d8e2ff",
+                        "tertiary-container": "#009ebe",
+                        "secondary": "#b9c7df",
+                        "surface-container-low": "#131b2e",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "on-tertiary-container": "#002e3a",
+                        "surface-container-lowest": "#060e20",
+                        "inverse-surface": "#dae2fd",
+                        "tertiary": "#3cd7ff",
+                        "on-background": "#dae2fd",
+                        "on-surface": "#dae2fd",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#31394d",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-primary-container": "#00285c",
+                        "background": "#0b1326",
+                        "surface": "#0b1326",
+                        "surface-variant": "#2d3449",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#3cd7ff",
+                        "on-primary": "#002e69",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "inverse-primary": "#005bc1",
+                        "on-secondary": "#233144",
+                        "secondary-container": "#3c4a5e",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .monolith-gradient {
+            background: linear-gradient(135deg, #adc6ff 0%, #4b8eff 100%);
+        }
+        .glass-card {
+            backdrop-filter: blur(24px);
+            background-color: rgba(49, 57, 77, 0.6);
+        }
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary selection:text-on-primary-container">
+<!-- Section 1: HEADER -->
+<header class="fixed top-0 w-full z-50 bg-[#0b1326] bg-opacity-60 backdrop-blur-xl bg-gradient-to-b from-[#131b2e] to-transparent shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(173,198,255,0.05)]">
+<nav class="flex justify-between items-center px-12 py-6 w-full max-w-none">
+<div class="text-2xl font-bold tracking-tighter text-[#adc6ff] font-['Space_Grotesk']">
+                ALOSANAR
+            </div>
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] text-sm tracking-tight">
+<a class="text-[#414755] hover:text-[#adc6ff] transition-colors transition-all duration-300 active:scale-95 duration-200" href="#">Strategy</a>
+<a class="text-[#414755] hover:text-[#adc6ff] transition-colors transition-all duration-300 active:scale-95 duration-200" href="#">Financing</a>
+<a class="text-[#414755] hover:text-[#adc6ff] transition-colors transition-all duration-300 active:scale-95 duration-200" href="#">Engineering</a>
+<a class="text-[#414755] hover:text-[#adc6ff] transition-colors transition-all duration-300 active:scale-95 duration-200" href="#">BESS</a>
+<a class="text-[#414755] hover:text-[#adc6ff] transition-colors transition-all duration-300 active:scale-95 duration-200" href="#">Operations</a>
+</div>
+<button class="monolith-gradient text-on-primary font-['Space_Grotesk'] font-bold text-sm px-6 py-2.5 rounded-lg active:scale-95 transition-all duration-200">
+                Contact Us
+            </button>
+</nav>
+</header>
+<main>
+<!-- Section 2: PAGE HERO -->
+<section class="relative h-[819px] flex items-center overflow-hidden bg-surface">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="Futuristic data center corridor with glowing blue server racks and symmetrical architectural lines in a dark high-tech environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_rv-RfLrAFzP0xZzZn7RetsnUR7OwR8WRX_GW0AIDDCi-lappZaxAWqiAhHgj3j5UCP7cOZh_yiLvOsv2BaIkcMq7t72gFBx8K20QARoj3JtOw-SM7GMx8NkczGgE2zl3UbgprmNoVgUw4g9kxq8pF25GHbwOgvWZGPsc7km3UNKN5cci386FNSyEoKsDpvjHe3NY5uBM3cCtbK3mcU-DPLK21gKDd7P8SrdwNlO2l1BOMsJJ0usCZT1_pn15FfhBRH_FOy6nZ4uE"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
+</div>
+<div class="relative z-10 px-12 max-w-7xl">
+<div class="mb-6 flex items-center gap-3">
+<span class="h-[2px] w-12 bg-tertiary"></span>
+<span class="font-label text-label-md text-tertiary tracking-[0.2em] uppercase">Infrastructure Excellence</span>
+</div>
+<h1 class="font-headline text-[3.5rem] md:text-[5rem] leading-[1.1] font-bold tracking-tight text-on-surface mb-8 max-w-4xl">
+                    Data Center <span class="text-primary">Consulting</span> Solutions
+                </h1>
+<p class="font-body text-body-lg text-on-surface-variant max-w-2xl leading-relaxed opacity-80">
+                    We architect the digital backbone of the future. Our integrated consulting approach ensures scalability, sustainability, and mission-critical reliability for global hyperscale infrastructure.
+                </p>
+</div>
+</section>
+<!-- Section 3: SERVICES GRID -->
+<section class="py-32 px-12 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1: Strategy -->
+<div class="glass-card group p-10 rounded-xl border border-outline-variant/15 flex flex-col h-full hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="explore">explore</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4 text-on-surface">Data Center Strategy</h3>
+<p class="font-body text-on-surface-variant leading-relaxed opacity-70">
+                            Expert navigation of the complex data center landscape, identifying strategic sites and optimizing operational models for maximum ROI.
+                        </p>
+<div class="mt-auto pt-8">
+<span class="text-xs font-label tracking-widest text-primary uppercase group-hover:gap-4 flex items-center gap-2 transition-all">
+                                View Capabilities <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Card 2: Financing -->
+<div class="glass-card group p-10 rounded-xl border border-outline-variant/15 flex flex-col h-full hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="payments">payments</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4 text-on-surface">Project Financing</h3>
+<p class="font-body text-on-surface-variant leading-relaxed opacity-70">
+                            Structured capital solutions for large-scale infrastructure, leveraging global financial networks to fuel high-impact growth.
+                        </p>
+<div class="mt-auto pt-8">
+<span class="text-xs font-label tracking-widest text-primary uppercase group-hover:gap-4 flex items-center gap-2 transition-all">
+                                View Capabilities <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Card 3: Engineering -->
+<div class="glass-card group p-10 rounded-xl border border-outline-variant/15 flex flex-col h-full hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="architecture">architecture</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4 text-on-surface">Engineering &amp; Design</h3>
+<p class="font-body text-on-surface-variant leading-relaxed opacity-70">
+                            Cutting-edge architectural and technical blueprints focused on efficiency, thermal management, and future-ready density.
+                        </p>
+<div class="mt-auto pt-8">
+<span class="text-xs font-label tracking-widest text-primary uppercase group-hover:gap-4 flex items-center gap-2 transition-all">
+                                View Capabilities <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Card 4: Management -->
+<div class="glass-card group p-10 rounded-xl border border-outline-variant/15 flex flex-col h-full hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="account_tree">account_tree</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4 text-on-surface">Project Management</h3>
+<p class="font-body text-on-surface-variant leading-relaxed opacity-70">
+                            End-to-end oversight of construction and deployment, ensuring timelines are met and technical specifications are exceeded.
+                        </p>
+<div class="mt-auto pt-8">
+<span class="text-xs font-label tracking-widest text-primary uppercase group-hover:gap-4 flex items-center gap-2 transition-all">
+                                View Capabilities <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Card 5: Battery (BESS) -->
+<div class="glass-card group p-10 rounded-xl border border-outline-variant/15 flex flex-col h-full hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="battery_charging_full">battery_charging_full</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4 text-on-surface">Battery (BESS)</h3>
+<p class="font-body text-on-surface-variant leading-relaxed opacity-70">
+                            Advanced energy storage solutions for sustainable operations, enabling seamless integration with renewable energy sources.
+                        </p>
+<div class="mt-auto pt-8">
+<span class="text-xs font-label tracking-widest text-primary uppercase group-hover:gap-4 flex items-center gap-2 transition-all">
+                                View Capabilities <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Card 6: Operations -->
+<div class="glass-card group p-10 rounded-xl border border-outline-variant/15 flex flex-col h-full hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="settings_suggest">settings_suggest</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4 text-on-surface">Operations</h3>
+<p class="font-body text-on-surface-variant leading-relaxed opacity-70">
+                            Strategic facility management and mission-critical uptime, optimizing lifecycle performance of infrastructure assets.
+                        </p>
+<div class="mt-auto pt-8">
+<span class="text-xs font-label tracking-widest text-primary uppercase group-hover:gap-4 flex items-center gap-2 transition-all">
+                                View Capabilities <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Section 4: FOOTER -->
+<footer class="bg-[#0b1326] w-full py-16 px-12 border-t border-[#414755]/15">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-[#adc6ff] mb-4 font-headline">ALOSANAR</div>
+<p class="font-['Manrope'] text-[0.75rem] text-[#414755] uppercase tracking-widest leading-loose">
+                        Engineering the next generation of data center infrastructure with precision and sustainability.
+                    </p>
+</div>
+<div>
+<h4 class="font-headline text-[#adc6ff] mb-6 text-sm font-bold uppercase tracking-widest">Solutions</h4>
+<ul class="space-y-4 font-['Manrope'] text-[0.75rem] uppercase tracking-widest">
+<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="#">Strategy</a></li>
+<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="#">Financing</a></li>
+<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="#">Design</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline text-[#adc6ff] mb-6 text-sm font-bold uppercase tracking-widest">Expertise</h4>
+<ul class="space-y-4 font-['Manrope'] text-[0.75rem] uppercase tracking-widest">
+<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="#">Management</a></li>
+<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="#">BESS</a></li>
+<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="#">Operations</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline text-[#adc6ff] mb-6 text-sm font-bold uppercase tracking-widest">Legal</h4>
+<ul class="space-y-4 font-['Manrope'] text-[0.75rem] uppercase tracking-widest">
+<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="#">Privacy</a></li>
+<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="#">Terms</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-['Manrope'] text-[0.75rem] uppercase tracking-widest text-[#414755]">
+                    © 2024 ALOSANAR INFRASTRUCTURE. ALL RIGHTS RESERVED.
+                </div>
+<div class="flex gap-8 opacity-80 hover:opacity-100 transition-opacity">
+<a class="material-symbols-outlined text-[#adc6ff]" data-icon="language" href="#">language</a>
+<a class="material-symbols-outlined text-[#adc6ff]" data-icon="share" href="#">share</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
