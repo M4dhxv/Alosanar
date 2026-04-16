@@ -1,303 +1,320 @@
+<!DOCTYPE html>
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>Data Center Solutions Marketplace | Alosanar</title>
+<meta name="description" content="Find advanced data center solutions with Alosanar. Explore the marketplace and connect with trusted partners today."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-            "surface-container-low": "#131b2e",
-            "on-secondary": "#233144",
-            "tertiary": "#3cd7ff",
-            "outline-variant": "#414755",
-            "secondary-container": "#3c4a5e",
-            "on-primary-fixed": "#001a41",
-            "on-tertiary-container": "#002e3a",
-            "on-secondary-fixed-variant": "#3a485b",
-            "primary-fixed": "#d8e2ff",
-            "inverse-surface": "#dae2fd",
-            "surface-tint": "#adc6ff",
-            "on-primary": "#002e69",
-            "inverse-primary": "#005bc1",
-            "surface-variant": "#2d3449",
-            "on-tertiary-fixed": "#001f27",
-            "on-error-container": "#ffdad6",
-            "primary-container": "#4b8eff",
-            "on-error": "#690005",
-            "tertiary-fixed": "#b4ebff",
-            "surface-container-lowest": "#060e20",
-            "on-primary-container": "#00285c",
-            "surface-dim": "#0b1326",
-            "on-tertiary-fixed-variant": "#004e5f",
-            "primary": "#adc6ff",
-            "tertiary-fixed-dim": "#3cd7ff",
-            "surface-container-high": "#222a3d",
-            "outline": "#8b90a0",
-            "surface": "#0b1326",
-            "on-primary-fixed-variant": "#004493",
-            "secondary-fixed": "#d5e3fc",
-            "on-tertiary": "#003642",
-            "error": "#ffb4ab",
-            "tertiary-container": "#009ebe",
-            "on-background": "#dae2fd",
-            "background": "#0b1326",
-            "inverse-on-surface": "#283044",
-            "surface-container-highest": "#2d3449",
-            "on-surface-variant": "#c1c6d7",
-            "on-surface": "#dae2fd",
-            "on-secondary-container": "#abb9d1",
-            "error-container": "#93000a",
-            "on-secondary-fixed": "#0d1c2e",
-            "surface-container": "#171f33",
-            "secondary": "#b9c7df",
-            "surface-bright": "#31394d",
-            "secondary-fixed-dim": "#b9c7df",
-            "primary-fixed-dim": "#adc6ff"
-          },
-          "borderRadius": {
-            "DEFAULT": "0.125rem",
-            "lg": "0.25rem",
-            "xl": "0.5rem",
-            "full": "0.75rem"
-          },
-          "fontFamily": {
-            "headline": ["Space Grotesk"],
-            "body": ["Manrope"],
-            "label": ["Manrope"]
-          }
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "tertiary": "#3cd7ff",
+          "surface-container-highest": "#2d3449",
+          "on-primary-container": "#00285c",
+          "surface-variant": "#2d3449",
+          "secondary-fixed": "#d5e3fc",
+          "error": "#ffb4ab",
+          "on-tertiary-container": "#002e3a",
+          "tertiary-container": "#009ebe",
+          "on-secondary-fixed": "#0d1c2e",
+          "on-secondary-fixed-variant": "#3a485b",
+          "surface-container-high": "#222a3d",
+          "on-error": "#690005",
+          "inverse-surface": "#dae2fd",
+          "surface-bright": "#31394d",
+          "on-tertiary-fixed-variant": "#004e5f",
+          "surface-container-low": "#131b2e",
+          "on-surface": "#dae2fd",
+          "on-error-container": "#ffdad6",
+          "surface-dim": "#0b1326",
+          "on-surface-variant": "#c1c6d7",
+          "on-secondary-container": "#abb9d1",
+          "primary-container": "#4b8eff",
+          "inverse-primary": "#005bc1",
+          "surface-container": "#171f33",
+          "primary-fixed-dim": "#adc6ff",
+          "on-secondary": "#233144",
+          "inverse-on-surface": "#283044",
+          "secondary-container": "#3c4a5e",
+          "outline": "#8b90a0",
+          "on-tertiary": "#003642",
+          "tertiary-fixed-dim": "#3cd7ff",
+          "surface-tint": "#adc6ff",
+          "surface-container-lowest": "#060e20",
+          "primary": "#adc6ff",
+          "on-primary-fixed-variant": "#004493",
+          "on-background": "#dae2fd",
+          "surface": "#0b1326",
+          "on-primary-fixed": "#001a41",
+          "secondary-fixed-dim": "#b9c7df",
+          "outline-variant": "#414755",
+          "primary-fixed": "#d8e2ff",
+          "tertiary-fixed": "#b4ebff",
+          "secondary": "#b9c7df",
+          "background": "#0b1326",
+          "on-primary": "#002e69",
+          "error-container": "#93000a",
+          "on-tertiary-fixed": "#001f27"
         },
-      },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "fontFamily": {
+          "headline": ["Space Grotesk"],
+          "body": ["Manrope"],
+          "label": ["Manrope"]
+        }
+      }
     }
-  </script>
+  }
+</script>
 <style>
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
-    .monolith-gradient {
-      background: linear-gradient(135deg, #adc6ff 0%, #4b8eff 100%);
-    }
-    .glass-nav {
-      background: rgba(11, 19, 38, 0.6);
-      backdrop-filter: blur(24px);
-    }
-    .text-glow {
-      text-shadow: 0 0 20px rgba(173, 198, 255, 0.3);
-    }
-    body {
-      background-color: #0b1326;
-      color: #dae2fd;
-      font-family: 'Manrope', sans-serif;
-    }
-  </style>
-</head>
-<body class="selection:bg-primary-container selection:text-on-primary-container">
-<!-- TopNavBar Section -->
-<nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-lg shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(173,198,255,0.05)]">
-<div class="flex justify-between items-center w-full px-8 h-20 max-w-[1440px] mx-auto">
-<a href="/"><img src="logo.png" alt="Alosanar" class="h-12 md:h-16 object-contain max-w-[200px] md:max-w-none mt-1"></a>
-<div class="hidden md:flex items-center gap-10">
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/">Home</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold border-b-2 border-blue-200 pb-1" href="/marketplace.html">Marketplace</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/operations.html">Operations</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/services.html">Services</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/about.html">About</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/energy.html">Energy</a>
-</div>
-<div class="flex items-center gap-6">
+  body {
+    background-color: #0b1326;
+    color: #dae2fd;
+    font-family: 'Manrope', sans-serif;
+    overflow-x: hidden;
+  }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .monolith-gradient {
+    background: linear-gradient(135deg, #adc6ff 0%, #4b8eff 100%);
+  }
 
-<a class="monolith-gradient px-6 py-3 rounded text-on-primary font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold inline-block" href="mailto:contact@alosanar.com">Contact Us</a>
-</div>
-</div>
+  /* Abstract US network map SVG glow */
+  .network-glow {
+    filter: drop-shadow(0 0 18px rgba(60, 215, 255, 0.35));
+  }
+
+  /* Reference link hover */
+  .ref-link {
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .ref-link:hover {
+    color: #3cd7ff;
+    border-color: rgba(60,215,255,0.4);
+  }
+</style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-lg shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(173,198,255,0.05)]">
+  <div class="flex justify-between items-center w-full px-8 h-20 max-w-[1440px] mx-auto">
+    <a href="/"><img src="logo.png" alt="Alosanar" class="h-12 md:h-16 object-contain max-w-[200px] md:max-w-none mt-1"></a>
+    <div class="hidden md:flex items-center gap-10">
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/">Home</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold border-b-2 border-blue-200 pb-1" href="/marketplace.html">Marketplace</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/operations.html">Operations</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/services.html">Services</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/about.html">About</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/energy.html">Energy</a>
+    </div>
+    <div class="flex items-center gap-6">
+      <a class="monolith-gradient px-6 py-3 rounded text-on-primary font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold inline-block" href="mailto:contact@alosanar.com">Contact Us</a>
+    </div>
+  </div>
 </nav>
-<main>
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-80" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=2200&q=90"/>
-<div class="absolute inset-0 bg-gradient-to-b from-[#0b1326]/80 via-[#0b1326]/40 to-[#0b1326]"></div>
-</div>
-<div class="container mx-auto px-8 relative z-10">
-<div class="max-w-5xl">
-<p class="font-label text-tertiary text-sm tracking-[0.3em] uppercase mb-6 flex items-center gap-4">
-<span class="w-12 h-[1px] bg-tertiary/40"></span> Infrastructure as a Service
-          </p>
-<h1 class="font-headline text-[3.5rem] md:text-[6rem] leading-[1.1] font-bold tracking-tighter text-on-surface mb-8 text-glow">
-            Data Center <br/>Solutions Marketplace
-          </h1>
-<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl font-light leading-relaxed">
-            While hyperscale data centers dominate headlines, there is also substantial demand for edge and regional data center capacity to support AI inference, data privacy requirements, and low-latency performance for real-time applications such as autonomous systems, robotics, financial services, video analytics, healthcare, government workloads, and 5G/6G networks.
-          </p>
-<div class="mt-12 flex flex-wrap gap-4">
-<a class="monolith-gradient px-10 py-5 text-on-primary-fixed font-bold tracking-tight inline-block" href="mailto:contact@alosanar.com">
-              Contact Us
-            </a>
-</div>
-</div>
-</div>
-<!-- Asymmetrical Element -->
-<div class="absolute bottom-20 right-0 hidden lg:block w-1/3 h-64 bg-surface-container-low/80 backdrop-blur-md p-8 border-l-4 border-tertiary">
-<div class="flex flex-col h-full justify-between">
-<div class="flex justify-between items-start">
-<span class="font-headline text-3xl font-bold text-primary">01</span>
-<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">dataset</span>
-</div>
-<div>
-<h3 class="font-headline text-xl font-bold mb-2">Live Capacity</h3>
-<p class="text-sm text-on-surface-variant">Global edge availability tracked in real-time across 42 regional hubs.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Market Overview Section -->
-<section class="py-32 bg-surface">
-<div class="container mx-auto px-8">
-<div class="flex flex-col lg:flex-row gap-20">
-<div class="lg:w-1/2">
-<h2 class="font-headline text-4xl md:text-6xl font-bold tracking-tighter mb-10 text-on-surface leading-none">
-              The Rise of <br/><span class="text-tertiary">Edge Capacity</span>
-</h2>
-<div class="space-y-8 font-body text-lg leading-relaxed text-on-surface-variant">
-<p>
-                While hyperscale data centers dominate headlines, there is also substantial demand for edge and regional data center capacity to support data privacy requirements and real-time performance.
-              </p>
-<p>
-                The modern ecosystem demands real-time applications across robotics, financial services, video analytics, healthcare, government workloads, and 5G/6G networks.
-              </p>
-</div>
-<div class="mt-12 grid grid-cols-2 gap-8">
-<div class="bg-surface-container-low p-8 relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary"></div>
-<div class="text-4xl font-headline font-bold text-primary mb-2">40%</div>
-<p class="text-xs font-label text-outline tracking-widest uppercase">Annual Growth Rate</p>
-</div>
-<div class="bg-surface-container-low p-8 relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-[2px] bg-primary"></div>
-<div class="text-4xl font-headline font-bold text-primary mb-2">&lt;5ms</div>
-<p class="text-xs font-label text-outline tracking-widest uppercase">Target Response</p>
-</div>
-</div>
-</div>
-<!-- Bento-style Data Visualizations -->
-<div class="lg:w-1/2 grid grid-cols-2 gap-4">
-<div class="col-span-2 bg-surface-container-low p-6 rounded-lg relative min-h-[300px] overflow-hidden group">
-<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Global network map at night with realistic city-light connectivity" src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1800&q=90"/>
-<div class="relative z-10 flex flex-col justify-between h-full">
-<span class="text-xs font-label tracking-[0.2em] text-tertiary uppercase">Network Density Map</span>
-<div class="bg-[#0b1326]/80 p-4 inline-block self-start backdrop-blur-sm">
-<span class="material-symbols-outlined text-primary">hub</span>
-</div>
-</div>
-</div>
-<div class="bg-surface-container-low p-6 rounded-lg">
-<div class="h-32 w-full flex items-end gap-2 mb-4">
-<div class="bg-primary/20 w-full h-1/2"></div>
-<div class="bg-primary/40 w-full h-2/3"></div>
-<div class="bg-primary/60 w-full h-3/4"></div>
-<div class="bg-tertiary w-full h-full"></div>
-</div>
-<p class="text-sm font-label text-on-surface-variant">Capacity Forecast</p>
-</div>
-<div class="bg-surface-container-high p-6 rounded-lg border-l-2 border-tertiary">
-<span class="material-symbols-outlined text-tertiary mb-4">memory</span>
-<p class="text-sm font-body">Optimized for H100/H200 Inference Clusters</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Marketplace Listings/Categories -->
-<section class="py-32 bg-surface-container-lowest">
-<div class="container mx-auto px-8">
-<div class="flex justify-between items-end mb-20">
-<div>
-<p class="text-tertiary font-label tracking-widest uppercase mb-4">Explore Inventory</p>
-<h2 class="font-headline text-5xl font-bold tracking-tighter">Modular Architecture</h2>
-</div>
-<div class="hidden md:block text-sm text-on-surface-variant">Current opportunities available by request.</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Card 1 -->
-<div class="group bg-surface-container-low p-1 relative min-h-[500px] flex flex-col transition-all hover:bg-surface-container-high">
-<div class="relative h-64 overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modular data center deployment with utility access" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=90"/>
-</div>
-<div class="p-10 flex-grow flex flex-col justify-between">
-<div>
-<h3 class="font-headline text-2xl font-bold mb-4">Edge Infrastructure</h3>
-<p class="font-body text-on-surface-variant text-sm leading-relaxed mb-6">
-                  Regional edge deployments with practical power availability and carrier connectivity.
-                </p>
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="group bg-surface-container-low p-1 relative min-h-[500px] flex flex-col transition-all hover:bg-surface-container-high">
-<div class="absolute top-0 left-0 w-full h-1 bg-tertiary opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<div class="relative h-64 overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Data center racks with modern network interconnects" src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=90"/>
-</div>
-<div class="p-10 flex-grow flex flex-col justify-between">
-<div>
-<h3 class="font-headline text-2xl font-bold mb-4">Compute Nodes</h3>
-<p class="font-body text-on-surface-variant text-sm leading-relaxed mb-6">
-                  Ready-to-deploy capacity for high-density compute workloads and regional processing needs.
-                </p>
-</div>
-</div>
-</div>
-<!-- Card 3 -->
-<div class="group bg-surface-container-low p-1 relative min-h-[500px] flex flex-col transition-all hover:bg-surface-container-high">
-<div class="relative h-64 overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Regional infrastructure hubs in urban markets" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=90"/>
-</div>
-<div class="p-10 flex-grow flex flex-col justify-between">
-<div>
-<h3 class="font-headline text-2xl font-bold mb-4">Regional Hubs</h3>
-<p class="font-body text-on-surface-variant text-sm leading-relaxed mb-6">
-                  Scalable footprints across key markets for expansion, resilience, and localized demand.
-                </p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Bottom CTA / Stats -->
-<section class="py-24 bg-surface relative overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-tertiary/30 to-transparent"></div>
-<div class="container mx-auto px-8">
-<div class="bg-surface-container-high p-12 md:p-20 flex flex-col md:flex-row justify-between items-center gap-12">
-<div class="max-w-xl">
-<h2 class="font-headline text-3xl md:text-5xl font-bold mb-6 leading-tight">Ready to deploy your <span class="text-primary">infrastructure?</span></h2>
-<p class="text-on-surface-variant font-body">Our architectural team can design a bespoke solution for your specific compute workload requirements.</p>
-</div>
-<a class="monolith-gradient px-12 py-6 text-on-primary-fixed font-black uppercase tracking-widest text-sm inline-block hover:shadow-[0_0_30px_rgba(173,198,255,0.4)] transition-all" href="mailto:contact@alosanar.com">
-            Contact Us
-          </a>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer Section -->
-<footer class="w-full py-12 px-8 bg-[#0b1326] border-t border-[#414755]/15">
-<div class="container mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-center gap-10">
-<div class="text-lg font-black text-[#adc6ff] tracking-tighter">Alosanar</div>
-<div class="flex flex-wrap justify-center gap-8 font-['Manrope'] text-sm uppercase tracking-widest">
-<a class="text-[#414755] hover:text-[#adc6ff] transition-colors opacity-80 hover:opacity-100" href="/about.html">About</a>
-<a class="text-[#414755] hover:text-[#adc6ff] transition-colors opacity-80 hover:opacity-100" href="/services.html">Services</a>
-<a class="text-[#414755] hover:text-[#adc6ff] transition-colors opacity-80 hover:opacity-100" href="/energy.html">Energy</a>
-<a class="text-[#414755] hover:text-[#adc6ff] transition-colors opacity-80 hover:opacity-100" href="mailto:contact@alosanar.com">Contact</a>
-</div>
-<div class="text-[#414755] font-['Manrope'] text-[10px] uppercase tracking-widest">
-          © 2024 Alosanar Infrastructure. All rights reserved.
+
+<!-- MAIN CONTENT -->
+<main class="min-h-screen pt-20">
+
+  <!-- HERO: split layout matching live site -->
+  <section class="min-h-screen flex items-center">
+    <div class="max-w-[1440px] mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center py-24">
+
+      <!-- Left: title + copy -->
+      <div>
+        <p class="font-['Space_Grotesk'] text-[10px] uppercase tracking-[0.3em] text-tertiary mb-6 font-bold">Marketplace</p>
+        <h1 class="font-headline text-[3rem] md:text-[4rem] leading-[1.1] font-bold tracking-tighter text-on-surface mb-10">
+          Marketplace
+        </h1>
+        <p class="font-body text-lg text-on-surface-variant leading-relaxed max-w-xl">
+          While hyperscale data centers dominate headlines, there is also substantial demand for edge and regional data center capacity to support AI inference, data privacy requirements, and low-latency performance for real-time applications such as autonomous systems, robotics, financial services, video analytics, healthcare, government workloads, and 5G/6G networks.
+        </p>
+      </div>
+
+      <!-- Right: abstract network map SVG -->
+      <div class="flex items-center justify-center">
+        <div class="w-full max-w-lg relative">
+          <!-- Glow blob behind map -->
+          <div class="absolute inset-0 rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(60,215,255,0.08)_0%,_transparent_70%)] blur-2xl"></div>
+          <!-- Inline SVG: abstract US network map with nodes -->
+          <svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto network-glow" aria-label="US edge data center network map">
+            <!-- US outline (simplified) -->
+            <path d="M 80 140 L 120 100 L 200 95 L 280 80 L 380 70 L 460 75 L 520 90 L 590 100 L 640 120 L 680 150 L 700 200 L 710 260 L 690 320 L 650 370 L 580 400 L 500 420 L 420 430 L 340 440 L 260 430 L 190 410 L 130 380 L 90 330 L 70 270 L 75 200 Z"
+              fill="none" stroke="rgba(173,198,255,0.12)" stroke-width="1.5"/>
+            <!-- State border texture lines -->
+            <path d="M 200 95 L 210 200 L 250 280" fill="none" stroke="rgba(173,198,255,0.07)" stroke-width="1"/>
+            <path d="M 380 70 L 370 180 L 380 300" fill="none" stroke="rgba(173,198,255,0.07)" stroke-width="1"/>
+            <path d="M 520 90 L 510 200 L 520 330" fill="none" stroke="rgba(173,198,255,0.07)" stroke-width="1"/>
+            <path d="M 80 230 L 710 230" fill="none" stroke="rgba(173,198,255,0.05)" stroke-width="1"/>
+            <path d="M 80 310 L 680 310" fill="none" stroke="rgba(173,198,255,0.05)" stroke-width="1"/>
+
+            <!-- Connection lines between nodes -->
+            <line x1="180" y1="170" x2="320" y2="140" stroke="rgba(60,215,255,0.25)" stroke-width="1"/>
+            <line x1="320" y1="140" x2="480" y2="130" stroke="rgba(60,215,255,0.25)" stroke-width="1"/>
+            <line x1="480" y1="130" x2="600" y2="175" stroke="rgba(60,215,255,0.20)" stroke-width="1"/>
+            <line x1="180" y1="170" x2="260" y2="290" stroke="rgba(173,198,255,0.20)" stroke-width="1"/>
+            <line x1="260" y1="290" x2="390" y2="310" stroke="rgba(173,198,255,0.20)" stroke-width="1"/>
+            <line x1="390" y1="310" x2="500" y2="280" stroke="rgba(173,198,255,0.20)" stroke-width="1"/>
+            <line x1="500" y1="280" x2="600" y2="175" stroke="rgba(60,215,255,0.15)" stroke-width="1"/>
+            <line x1="320" y1="140" x2="390" y2="310" stroke="rgba(173,198,255,0.12)" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="480" y1="130" x2="500" y2="280" stroke="rgba(173,198,255,0.12)" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="260" y1="290" x2="200" y2="370" stroke="rgba(173,198,255,0.15)" stroke-width="1"/>
+            <line x1="390" y1="310" x2="370" y2="390" stroke="rgba(173,198,255,0.15)" stroke-width="1"/>
+            <line x1="500" y1="280" x2="540" y2="370" stroke="rgba(173,198,255,0.15)" stroke-width="1"/>
+
+            <!-- Network nodes -->
+            <!-- Seattle -->
+            <circle cx="140" cy="135" r="5" fill="#3cd7ff" opacity="0.9"/>
+            <circle cx="140" cy="135" r="10" fill="#3cd7ff" opacity="0.15"/>
+
+            <!-- Portland -->
+            <circle cx="180" cy="170" r="4" fill="#adc6ff" opacity="0.8"/>
+            <circle cx="180" cy="170" r="8" fill="#adc6ff" opacity="0.12"/>
+
+            <!-- San Francisco -->
+            <circle cx="155" cy="250" r="6" fill="#3cd7ff" opacity="0.9"/>
+            <circle cx="155" cy="250" r="12" fill="#3cd7ff" opacity="0.15"/>
+
+            <!-- Los Angeles -->
+            <circle cx="185" cy="330" r="5" fill="#adc6ff" opacity="0.8"/>
+
+            <!-- Phoenix -->
+            <circle cx="230" cy="340" r="4" fill="#adc6ff" opacity="0.7"/>
+
+            <!-- Denver -->
+            <circle cx="320" cy="240" r="4" fill="#adc6ff" opacity="0.7"/>
+
+            <!-- Dallas -->
+            <circle cx="390" cy="360" r="5" fill="#adc6ff" opacity="0.8"/>
+            <circle cx="390" cy="360" r="10" fill="#adc6ff" opacity="0.12"/>
+
+            <!-- Chicago -->
+            <circle cx="480" cy="200" r="6" fill="#3cd7ff" opacity="0.9"/>
+            <circle cx="480" cy="200" r="12" fill="#3cd7ff" opacity="0.15"/>
+
+            <!-- Minneapolis -->
+            <circle cx="440" cy="150" r="4" fill="#adc6ff" opacity="0.7"/>
+
+            <!-- Atlanta -->
+            <circle cx="530" cy="320" r="5" fill="#adc6ff" opacity="0.8"/>
+
+            <!-- New York -->
+            <circle cx="620" cy="170" r="7" fill="#3cd7ff" opacity="0.9"/>
+            <circle cx="620" cy="170" r="14" fill="#3cd7ff" opacity="0.15"/>
+
+            <!-- Washington DC -->
+            <circle cx="600" cy="220" r="5" fill="#adc6ff" opacity="0.8"/>
+
+            <!-- Miami -->
+            <circle cx="560" cy="400" r="4" fill="#adc6ff" opacity="0.7"/>
+
+            <!-- Boston -->
+            <circle cx="645" cy="140" r="4" fill="#adc6ff" opacity="0.7"/>
+
+            <!-- Portland ME label dots -->
+            <circle cx="320" cy="140" r="4" fill="#adc6ff" opacity="0.7"/>
+
+            <!-- Hawaii (inset) -->
+            <circle cx="155" cy="430" r="3" fill="#3cd7ff" opacity="0.6"/>
+            <circle cx="175" cy="445" r="2.5" fill="#adc6ff" opacity="0.5"/>
+            <line x1="155" y1="430" x2="175" y2="445" stroke="rgba(60,215,255,0.2)" stroke-width="0.8"/>
+
+            <!-- Alaska (inset) -->
+            <circle cx="100" cy="430" r="3" fill="#3cd7ff" opacity="0.5"/>
+            <circle cx="110" cy="445" r="2" fill="#adc6ff" opacity="0.4"/>
+          </svg>
         </div>
-</div>
-</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENCE LINKS GRID (matching live site's link grid) -->
+  <section class="py-20 bg-surface-container-lowest relative">
+    <!-- Subtle glow background -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,_rgba(60,215,255,0.04)_0%,_transparent_65%)]"></div>
+    <div class="max-w-[1440px] mx-auto px-8 relative z-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-outline-variant/10">
+        <a href="https://www.jll.com/en-us/newsroom/global-edge-data-center-market-to-cross-300-billion-dollar-by-2026"
+           target="_blank" rel="noopener"
+           class="ref-link p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
+          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-4 block transition-colors">open_in_new</span>
+          <div class="font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em] text-on-surface-variant group-hover:text-tertiary transition-colors font-bold">Edge Growth</div>
+        </a>
+
+        <a href="#"
+           class="ref-link p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
+          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-4 block transition-colors">location_city</span>
+          <div class="font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em] text-on-surface-variant group-hover:text-tertiary transition-colors font-bold">Friendly DC Community</div>
+        </a>
+
+        <a href="https://www.eetimes.com/the-ai-future-is-now-all-about-the-edge/"
+           target="_blank" rel="noopener"
+           class="ref-link p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
+          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-4 block transition-colors">open_in_new</span>
+          <div class="font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em] text-on-surface-variant group-hover:text-tertiary transition-colors font-bold">AI Is All About the Edge</div>
+        </a>
+
+        <a href="https://finance.yahoo.com/news/north-america-edge-data-center-162700212.html"
+           target="_blank" rel="noopener"
+           class="ref-link p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
+          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-4 block transition-colors">open_in_new</span>
+          <div class="font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em] text-on-surface-variant group-hover:text-tertiary transition-colors font-bold">Edge DC Market Size</div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=VJcCQ4fkWts"
+           target="_blank" rel="noopener"
+           class="ref-link p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
+          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-4 block transition-colors">play_circle</span>
+          <div class="font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em] text-on-surface-variant group-hover:text-tertiary transition-colors font-bold">AI RAN</div>
+        </a>
+
+        <a href="https://www.openpr.com/news/4273074/edge-data-center-market-set-to-surge-key-insights-you-must-know"
+           target="_blank" rel="noopener"
+           class="ref-link p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
+          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-4 block transition-colors">open_in_new</span>
+          <div class="font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em] text-on-surface-variant group-hover:text-tertiary transition-colors font-bold">Data Center Market Surge</div>
+        </a>
+
+        <a href="https://www.forbes.com/sites/delltechnologies/2026/01/23/the-rise-of-distributed-data-centers-in-the-ai-era/"
+           target="_blank" rel="noopener"
+           class="ref-link p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
+          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-4 block transition-colors">open_in_new</span>
+          <div class="font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em] text-on-surface-variant group-hover:text-tertiary transition-colors font-bold">More Distributed Compute</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-slate-950 w-full py-16 border-t border-slate-800/50">
+  <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+    <div class="flex flex-col items-center md:items-start gap-4">
+      <div class="text-xl font-bold text-blue-200 font-['Space_Grotesk']">Alosanar</div>
+      <div class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500">© 2026, Alosanar. All Rights Reserved.</div>
+    </div>
+    <div class="flex flex-wrap justify-center gap-8 font-['Manrope'] text-[10px] uppercase tracking-[0.2em]">
+      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/">Home</a>
+      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/operations.html">Operations</a>
+      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/services.html">Services</a>
+      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/energy.html">Energy</a>
+      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/about.html">About</a>
+      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="mailto:contact@alosanar.com">Contact</a>
+    </div>
+  </div>
 </footer>
+
 </body></html>
