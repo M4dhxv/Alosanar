@@ -1,195 +1,262 @@
 <!DOCTYPE html>
-
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Alosanar | Energy Integration</title>
+<title>Energy | Alosanar</title>
+<meta name="description" content="Alosanar has assembled a large and growing portfolio of properties providing access to gigawatts of available power capacity throughout the US and the world."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary": "#3cd7ff",
-                    "surface-container-highest": "#2d3449",
-                    "on-primary-container": "#00285c",
-                    "surface-variant": "#2d3449",
-                    "secondary-fixed": "#d5e3fc",
-                    "error": "#ffb4ab",
-                    "on-tertiary-container": "#002e3a",
-                    "tertiary-container": "#009ebe",
-                    "on-secondary-fixed": "#0d1c2e",
-                    "on-secondary-fixed-variant": "#3a485b",
-                    "surface-container-high": "#222a3d",
-                    "on-error": "#690005",
-                    "inverse-surface": "#dae2fd",
-                    "surface-bright": "#31394d",
-                    "on-tertiary-fixed-variant": "#004e5f",
-                    "surface-container-low": "#131b2e",
-                    "on-surface": "#dae2fd",
-                    "on-error-container": "#ffdad6",
-                    "surface-dim": "#0b1326",
-                    "on-surface-variant": "#c1c6d7",
-                    "on-secondary-container": "#abb9d1",
-                    "primary-container": "#4b8eff",
-                    "inverse-primary": "#005bc1",
-                    "surface-container": "#171f33",
-                    "primary-fixed-dim": "#adc6ff",
-                    "on-secondary": "#233144",
-                    "inverse-on-surface": "#283044",
-                    "secondary-container": "#3c4a5e",
-                    "outline": "#8b90a0",
-                    "on-tertiary": "#003642",
-                    "tertiary-fixed-dim": "#3cd7ff",
-                    "surface-tint": "#adc6ff",
-                    "surface-container-lowest": "#060e20",
-                    "primary": "#adc6ff",
-                    "on-primary-fixed-variant": "#004493",
-                    "on-background": "#dae2fd",
-                    "surface": "#0b1326",
-                    "on-primary-fixed": "#001a41",
-                    "secondary-fixed-dim": "#b9c7df",
-                    "outline-variant": "#414755",
-                    "primary-fixed": "#d8e2ff",
-                    "tertiary-fixed": "#b4ebff",
-                    "secondary": "#b9c7df",
-                    "background": "#0b1326",
-                    "on-primary": "#002e69",
-                    "error-container": "#93000a",
-                    "on-tertiary-fixed": "#001f27"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": ["Space Grotesk"],
-                    "body": ["Manrope"],
-                    "label": ["Manrope"]
-            }
-          }
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "tertiary": "#3cd7ff",
+          "surface-container-highest": "#2d3449",
+          "on-primary-container": "#00285c",
+          "surface-variant": "#2d3449",
+          "secondary-fixed": "#d5e3fc",
+          "error": "#ffb4ab",
+          "on-tertiary-container": "#002e3a",
+          "tertiary-container": "#009ebe",
+          "on-secondary-fixed": "#0d1c2e",
+          "on-secondary-fixed-variant": "#3a485b",
+          "surface-container-high": "#222a3d",
+          "on-error": "#690005",
+          "inverse-surface": "#dae2fd",
+          "surface-bright": "#31394d",
+          "on-tertiary-fixed-variant": "#004e5f",
+          "surface-container-low": "#131b2e",
+          "on-surface": "#dae2fd",
+          "on-error-container": "#ffdad6",
+          "surface-dim": "#0b1326",
+          "on-surface-variant": "#c1c6d7",
+          "on-secondary-container": "#abb9d1",
+          "primary-container": "#4b8eff",
+          "inverse-primary": "#005bc1",
+          "surface-container": "#171f33",
+          "primary-fixed-dim": "#adc6ff",
+          "on-secondary": "#233144",
+          "inverse-on-surface": "#283044",
+          "secondary-container": "#3c4a5e",
+          "outline": "#8b90a0",
+          "on-tertiary": "#003642",
+          "tertiary-fixed-dim": "#3cd7ff",
+          "surface-tint": "#adc6ff",
+          "surface-container-lowest": "#060e20",
+          "primary": "#adc6ff",
+          "on-primary-fixed-variant": "#004493",
+          "on-background": "#dae2fd",
+          "surface": "#0b1326",
+          "on-primary-fixed": "#001a41",
+          "secondary-fixed-dim": "#b9c7df",
+          "outline-variant": "#414755",
+          "primary-fixed": "#d8e2ff",
+          "tertiary-fixed": "#b4ebff",
+          "secondary": "#b9c7df",
+          "background": "#0b1326",
+          "on-primary": "#002e69",
+          "error-container": "#93000a",
+          "on-tertiary-fixed": "#001f27"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "fontFamily": {
+          "headline": ["Space Grotesk"],
+          "body": ["Manrope"],
+          "label": ["Manrope"]
         }
       }
-    </script>
+    }
+  }
+</script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .monolith-gradient {
-            background: linear-gradient(135deg, #adc6ff 0%, #4b8eff 100%);
-        }
-        .obsidian-glass {
-            background: rgba(49, 57, 77, 0.6);
-            backdrop-filter: blur(24px);
-        }
-    </style>
+  body {
+    background-color: #0b1326;
+    color: #dae2fd;
+    font-family: 'Manrope', sans-serif;
+    overflow-x: hidden;
+  }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .monolith-gradient {
+    background: linear-gradient(135deg, #adc6ff 0%, #4b8eff 100%);
+  }
+  .glass-panel {
+    background: rgba(23, 31, 51, 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+  .img-reveal {
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .img-reveal:hover {
+    transform: scale(1.03);
+  }
+</style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
-<!-- 1. HEADER (TopNavBar) -->
-<nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-lg shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(173,198,255,0.05)]">
-<div class="flex justify-between items-center w-full px-8 h-20 max-w-[1440px] mx-auto">
-<a href="/"><img src="logo.png" alt="Alosanar" class="h-12 md:h-16 object-contain max-w-[200px] md:max-w-none mt-1"></a>
-<div class="hidden md:flex items-center gap-10">
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/">Home</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/marketplace.html">Marketplace</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/operations.html">Operations</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/services.html">Services</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/about.html">About</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold border-b-2 border-blue-200 pb-1" href="/energy.html">Energy</a>
-</div>
-<div class="flex items-center gap-6">
 
-<a class="monolith-gradient px-6 py-3 rounded text-on-primary font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold inline-block" href="mailto:contact@alosanar.com">Contact Us</a>
-</div>
-</div>
-</nav>
-<!-- 2. HERO SECTION -->
-<header class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-surface-container-lowest">
-<!-- Background Imagery Treatment -->
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-80" src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2200&q=90"/>
-<div class="absolute inset-0 bg-gradient-to-r from-surface-dim via-surface-dim/80 to-transparent"></div>
-</div>
-<div class="relative z-10 max-w-[1440px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
-<div class="lg:col-span-8 flex flex-col justify-center">
-<div class="inline-flex items-center gap-3 mb-8">
-<span class="w-12 h-[2px] bg-tertiary"></span>
-<span class="font-label text-[10px] uppercase tracking-[0.3em] text-tertiary font-bold"></span>
-</div>
-<h1 class="font-headline text-[3.5rem] md:text-[5rem] leading-[1.1] mb-8 -ml-1 tracking-tighter text-on-surface">Data Center <span class="text-primary italic">Energy Integration</span></h1>
-<p class="max-w-xl font-body text-lg text-on-surface-variant leading-relaxed">The well publicized energy concerns stemming from data center demands leave out a very big mitigating factor.</p>
-<div class="mt-12 flex flex-wrap gap-6">
-<a class="monolith-gradient px-8 py-5 rounded-lg text-on-primary font-headline font-bold uppercase tracking-widest text-sm inline-flex items-center gap-3" href="mailto:contact@alosanar.com">
-                        Contact Us <span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-<!-- Bottom Section Indicator -->
-<div class="absolute bottom-12 right-8 flex items-center gap-4">
-<div class="font-label text-[10px] uppercase tracking-widest text-outline">Available Grid + Connectivity</div>
-<div class="w-2 h-2 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_#3cd7ff]"></div>
-</div>
-</header>
-<section class="py-32 bg-surface">
-    <div class="max-w-5xl mx-auto px-8">
-        <h2 class="font-headline text-3xl mb-8 text-on-surface">Gigawatts of Available Power</h2>
-        <div class="space-y-6">
-            <p class="font-body text-xl text-on-surface-variant leading-relaxed">
-                While there are energy constraints for some greenfield projects and projects with very specific location requirements, the reality is there are gigawatts worth of available power scattered about in disparate buildings and properties throughout the US and the world. 
-            </p>
-            <p class="font-body text-xl text-on-surface-variant leading-relaxed">
-                This includes both immediate connectivity and available grid capacity that is untapped.
-            </p>
-            <p class="font-body text-xl text-on-surface-variant leading-relaxed border-l-2 border-primary pl-6">
-                We have assembled a large and growing portfolio of properties through site rights, referrals, lease or purchase that provide access to this capacity.
-            </p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8 mt-12">
-            <div class="overflow-hidden rounded-xl border border-outline-variant/20">
-                <img class="w-full h-72 object-cover" alt="High-voltage power lines at sunset" src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1400&q=90"/>
-            </div>
-            <div class="overflow-hidden rounded-xl border border-outline-variant/20">
-                <img class="w-full h-72 object-cover" alt="Electrical substation with transformers and transmission equipment" src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1400&q=90"/>
-            </div>
-        </div>
+<!-- NAV -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-lg shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(173,198,255,0.05)]">
+  <div class="flex justify-between items-center w-full px-8 h-20 max-w-[1440px] mx-auto">
+    <a href="/"><img src="logo.png" alt="Alosanar" class="h-12 md:h-16 object-contain max-w-[200px] md:max-w-none mt-1"></a>
+    <div class="hidden md:flex items-center gap-10">
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/">Home</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/marketplace.html">Marketplace</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/operations.html">Operations</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/services.html">Services</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/about.html">About</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold border-b-2 border-blue-200 pb-1" href="/energy.html">Energy</a>
     </div>
+    <div class="flex items-center gap-6">
+      <a class="monolith-gradient px-6 py-3 rounded text-on-primary font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold inline-block" href="mailto:contact@alosanar.com">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="relative min-h-screen flex items-end pb-24 pt-20 overflow-hidden bg-surface-container-lowest">
+  <div class="absolute inset-0 z-0">
+    <img class="w-full h-full object-cover opacity-70 img-reveal" src="energy_power_lines.png" alt="High voltage transmission lines"/>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#060e20] via-[#060e20]/85 to-[#060e20]/30"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#060e20] via-transparent to-transparent"></div>
+  </div>
+  <div class="relative z-10 max-w-[1440px] mx-auto px-8 w-full">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-3 mb-8">
+        <span class="w-12 h-[2px] bg-tertiary"></span>
+        <span class="font-label text-[10px] uppercase tracking-[0.3em] text-tertiary font-bold">Grid Infrastructure</span>
+      </div>
+      <h1 class="font-headline text-[3.5rem] md:text-[5.5rem] leading-[1.05] mb-8 tracking-tighter text-on-surface">
+        Energy
+      </h1>
+      <p class="max-w-2xl font-body text-xl text-on-surface-variant leading-relaxed">
+        Gigawatts of available power — scattered throughout the US and the world, waiting to be unlocked.
+      </p>
+    </div>
+  </div>
+  <!-- pulse indicator -->
+  <div class="absolute bottom-12 right-8 flex items-center gap-4 z-10">
+    <div class="font-label text-[10px] uppercase tracking-widest text-outline">Available Grid + Connectivity</div>
+    <div class="w-2 h-2 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_#3cd7ff]"></div>
+  </div>
+</header>
+
+<!-- BODY COPY -->
+<section class="py-32 bg-surface">
+  <div class="max-w-[1440px] mx-auto px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
+
+      <!-- TEXT COLUMN -->
+      <div class="lg:col-span-7">
+        <div class="space-y-8 font-body text-xl text-on-surface-variant leading-relaxed">
+          <p>
+            The well publicized energy concerns stemming from data center demands leave out a very big mitigating factor. While there are energy constraints for some greenfield projects and projects with very specific location requirements, the reality is there are gigawatts worth of available power scattered about in disparate buildings and properties throughout the US and the world. This includes both immediate connectivity and available grid capacity that is untapped.
+          </p>
+          <p class="border-l-2 border-primary pl-6 text-on-surface">
+            We have assembled a large and growing portfolio of properties through site rights, referrals, lease or purchase that provide access to this available capacity.
+          </p>
+        </div>
+      </div>
+
+      <!-- STATS COLUMN -->
+      <div class="lg:col-span-5 lg:pt-4">
+        <div class="space-y-6">
+          <div class="bg-surface-container-low p-8 border-l-2 border-tertiary">
+            <div class="font-headline text-4xl font-bold text-tertiary mb-2">GW+</div>
+            <div class="font-label text-[10px] uppercase tracking-widest text-outline">Available Power Portfolio</div>
+          </div>
+          <div class="bg-surface-container-low p-8 border-l-2 border-primary">
+            <div class="font-headline text-4xl font-bold text-primary mb-2">US + Global</div>
+            <div class="font-label text-[10px] uppercase tracking-widest text-outline">Geographic Reach</div>
+          </div>
+          <div class="bg-surface-container-low p-8 border-l-2 border-outline-variant">
+            <div class="font-headline text-lg font-bold text-on-surface mb-2">Site Rights · Referrals · Lease · Purchase</div>
+            <div class="font-label text-[10px] uppercase tracking-widest text-outline">Portfolio Acquisition Methods</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
+
+<!-- VISUAL INFRASTRUCTURE SECTION -->
+<section class="py-0 bg-surface-container-lowest">
+  <!-- Full-bleed substation image -->
+  <div class="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
+    <img class="w-full h-full object-cover opacity-80 img-reveal" src="energy_substation.png" alt="Electrical substation — power infrastructure at blue hour"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#060e20] via-transparent to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-[#060e20]/60 to-transparent"></div>
+    <div class="absolute bottom-10 left-8 md:left-20">
+      <span class="font-label text-[10px] uppercase tracking-[0.3em] text-tertiary font-bold">Electrical Substation</span>
+      <div class="font-headline text-2xl md:text-4xl font-bold text-on-surface mt-2">Power infrastructure<br/>at scale.</div>
+    </div>
+  </div>
+</section>
+
+<!-- GRID AERIAL + DETAIL SECTION -->
+<section class="py-32 bg-surface">
+  <div class="max-w-[1440px] mx-auto px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Grid aerial image -->
+      <div class="relative overflow-hidden rounded-lg group" style="height:480px">
+        <img class="w-full h-full object-cover img-reveal opacity-85" src="energy_grid_aerial.png" alt="Aerial view of power grid transmission infrastructure at night"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1326]/80 via-transparent to-transparent"></div>
+        <div class="absolute bottom-8 left-8">
+          <span class="font-label text-[10px] uppercase tracking-widest text-tertiary">Grid Transmission</span>
+          <div class="font-headline text-xl font-bold text-on-surface mt-1">Immediate Connectivity</div>
+        </div>
+      </div>
+
+      <!-- Power lines image -->
+      <div class="relative overflow-hidden rounded-lg group" style="height:480px">
+        <img class="w-full h-full object-cover img-reveal opacity-85" src="energy_power_lines.png" alt="High voltage electrical transmission towers across landscape"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0b1326]/80 via-transparent to-transparent"></div>
+        <div class="absolute bottom-8 left-8">
+          <span class="font-label text-[10px] uppercase tracking-widest text-tertiary">Transmission Lines</span>
+          <div class="font-headline text-xl font-bold text-on-surface mt-1">Untapped Grid Capacity</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-32 bg-surface-container-lowest relative overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(75,142,255,0.06)_0%,_transparent_70%)]"></div>
+  <div class="max-w-4xl mx-auto px-8 text-center relative z-10">
+    <h2 class="font-headline text-3xl md:text-5xl font-bold tracking-tighter mb-8 text-on-surface">Connect with us to explore available capacity.</h2>
+    <a class="inline-flex items-center gap-3 monolith-gradient px-10 py-5 rounded-lg text-on-primary font-headline font-bold uppercase tracking-widest text-sm hover:shadow-[0_0_40px_rgba(173,198,255,0.25)] transition-all" href="mailto:contact@alosanar.com">
+      contact@alosanar.com <span class="material-symbols-outlined text-sm">arrow_forward</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer class="bg-slate-950 w-full py-16 border-t border-slate-800/50">
-<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="flex flex-col items-center md:items-start gap-4">
-<div class="text-xl font-bold text-blue-200 font-['Space_Grotesk']">
-                    Alosanar Infrastructure.
-                </div>
-<div class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500 opacity-80 hover:opacity-100">
-                    © 2026, Alosanar. All Rights Reserved.
-                </div>
-</div>
-<div class="flex flex-wrap justify-center gap-8">
-<a class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500 hover:text-blue-300 transition-colors" href="/about.html">About</a>
-<a class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500 hover:text-blue-300 transition-colors" href="/marketplace.html">Marketplace</a>
-<a class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500 hover:text-blue-300 transition-colors" href="/operations.html">Operations</a>
-<a class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500 hover:text-blue-300 transition-colors" href="mailto:contact@alosanar.com">Contact</a>
-</div>
-<div class="flex gap-4">
-<div class="w-8 h-8 rounded bg-slate-900 flex items-center justify-center hover:bg-slate-800 transition-all cursor-pointer">
-<span class="material-symbols-outlined text-sm text-blue-200">lan</span>
-</div>
-<div class="w-8 h-8 rounded bg-slate-900 flex items-center justify-center hover:bg-slate-800 transition-all cursor-pointer">
-<span class="material-symbols-outlined text-sm text-blue-200">terminal</span>
-</div>
-</div>
-</div>
-<div class="mt-12 text-center">
-<div class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-800">
-                The Architectural Monolith
-            </div>
-</div>
+  <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+    <div class="flex flex-col items-center md:items-start gap-4">
+      <div class="text-xl font-bold text-blue-200 font-['Space_Grotesk']">Alosanar</div>
+      <div class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500">© 2026, Alosanar. All Rights Reserved.</div>
+    </div>
+    <div class="flex flex-wrap justify-center gap-8 font-['Manrope'] text-[10px] uppercase tracking-[0.2em]">
+      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/">Home</a>
+      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/marketplace.html">Marketplace</a>
+      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/operations.html">Operations</a>
+      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/services.html">Services</a>
+      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/about.html">About</a>
+      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="mailto:contact@alosanar.com">Contact</a>
+    </div>
+  </div>
 </footer>
+
 </body></html>
