@@ -7,7 +7,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -92,140 +91,168 @@
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
         }
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: flex; }
     </style>
 </head>
 <body class="bg-background text-on-background">
 <!-- TOPNAVBAR SECTION -->
 <nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-lg shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(173,198,255,0.05)]">
-<div class="flex justify-between items-center w-full px-8 h-20 max-w-[1440px] mx-auto">
-<a href="/"><img src="logo.png" alt="Alosanar" class="h-12 md:h-16 object-contain max-w-[200px] md:max-w-none mt-1"></a>
-<div class="hidden md:flex items-center gap-10">
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/">Home</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/marketplace.html">Marketplace</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold border-b-2 border-blue-200 pb-1" href="/operations.html">Operations</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/services.html">Services</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/about.html">About</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/energy.html">Energy</a>
-</div>
-</div>
+  <div class="flex justify-between items-center w-full px-5 sm:px-8 h-16 sm:h-20 max-w-[1440px] mx-auto">
+    <a href="/"><img src="logo.png" alt="Alosanar" class="h-10 md:h-14 object-contain max-w-[160px] md:max-w-none mt-1"></a>
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-10">
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/">Home</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/marketplace.html">Marketplace</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold border-b-2 border-blue-200 pb-1" href="/operations.html">Operations</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/services.html">Services</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/about.html">About</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/energy.html">Energy</a>
+    </div>
+    <!-- Hamburger -->
+    <button id="hamburger-btn" class="md:hidden flex flex-col gap-[5px] p-2 rounded focus:outline-none" aria-label="Open menu">
+      <span class="block w-6 h-[2px] bg-blue-200"></span>
+      <span class="block w-6 h-[2px] bg-blue-200"></span>
+      <span class="block w-4 h-[2px] bg-blue-200"></span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden flex-col bg-slate-950/95 backdrop-blur-xl border-t border-slate-800/40">
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/">Home</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/marketplace.html">Marketplace</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold px-6 py-4 border-b border-slate-800/30 block" href="/operations.html">Operations</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/services.html">Services</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/about.html">About</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 block transition-colors" href="/energy.html">Energy</a>
+  </div>
 </nav>
+
 <!-- PAGE HERO SECTION -->
-<section class="relative min-h-[870px] flex items-center pt-24 overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-95" src="hero_operations.png" alt="Data center operations — server rack corridor"/>
-<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-</div>
-<div class="container mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12">
-<div class="lg:col-span-8">
-<div class="inline-block px-3 py-1 mb-6 border-l-2 border-tertiary bg-tertiary/5">
-<span class="font-label text-xs tracking-[0.3em] text-tertiary uppercase font-bold">Operations</span>
-</div>
-<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tighter text-on-background mb-8">
-                    Data Center <br/>
-<span class="text-primary italic font-light">Operations</span>
-                </h1>
-<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed font-light">
-                    Today's data centers should be designed and built with future operational performance in mind, and much more dynamic capabilities, economics and vision.
-                </p>
-</div>
-</div>
+<section class="relative min-h-[600px] sm:min-h-[870px] flex items-center pt-20 sm:pt-24 overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img class="w-full h-full object-cover opacity-95" src="hero_operations.png" alt="Data center operations — server rack corridor"/>
+    <div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+  </div>
+  <div class="container mx-auto px-5 sm:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12">
+    <div class="lg:col-span-8">
+      <div class="inline-block px-3 py-1 mb-5 sm:mb-6 border-l-2 border-tertiary bg-tertiary/5">
+        <span class="font-label text-xs tracking-[0.3em] text-tertiary uppercase font-bold">Operations</span>
+      </div>
+      <h1 class="font-headline text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tighter text-on-background mb-6 sm:mb-8">
+        Data Center <br/>
+        <span class="text-primary italic font-light">Operations</span>
+      </h1>
+      <p class="font-body text-base sm:text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed font-light">
+        Today's data centers should be designed and built with future operational performance in mind, and much more dynamic capabilities, economics and vision.
+      </p>
+    </div>
+  </div>
 </section>
-<!-- IN-DEPTH ANALYSIS SECTION: STRATEGIC INTELLIGENCE -->
-<section class="py-32 relative bg-background">
-<div class="container mx-auto px-8">
-<div class="flex items-center gap-4 mb-20">
-<div class="h-px bg-outline-variant/30 flex-grow"></div>
-<h2 class="font-headline text-sm tracking-[0.4em] uppercase text-tertiary font-black px-4">Operations</h2>
-<div class="h-px bg-outline-variant/30 w-24"></div>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-px bg-outline-variant/15 overflow-hidden rounded-xl border border-outline-variant/10">
-<!-- Left Card -->
-<div class="glass-panel p-12 lg:p-20 relative group hover:bg-surface-container-high transition-colors duration-500">
-<div class="absolute top-0 left-0 w-1 h-0 bg-tertiary group-hover:h-full transition-all duration-700"></div>
-<span class="font-headline text-5xl text-primary/20 absolute top-10 right-10 select-none">01</span>
-<div class="max-w-lg">
-<span class="material-symbols-outlined text-4xl text-primary mb-10" data-icon="ac_unit">ac_unit</span>
-<p class="font-body text-2xl text-on-surface leading-snug font-medium mb-6">
-                            Design and build with future operational performance in mind.
-                        </p>
-<p class="font-body text-on-surface-variant/80 leading-relaxed">
-                            This means more progressive thinking around cooling, varying electrical loads, fire life safety, energy, efficiency, and sustainability as well as changing staffing paradigms. Even the location of edge data centers is a creative exercise when repurposing former real estate use-types.
-                        </p>
-</div>
-</div>
-<!-- Right Card -->
-<div class="glass-panel p-12 lg:p-20 relative group hover:bg-surface-container-high transition-colors duration-500">
-<div class="absolute top-0 left-0 w-1 h-0 bg-tertiary group-hover:h-full transition-all duration-700"></div>
-<span class="font-headline text-5xl text-primary/20 absolute top-10 right-10 select-none">02</span>
-<div class="max-w-lg">
-<span class="material-symbols-outlined text-4xl text-primary mb-10" data-icon="psychology">psychology</span>
-<p class="font-body text-2xl text-on-surface leading-snug font-medium mb-6">
-                            Artificial intelligence is not only the reason for data center growth, but also the way that data centers should be designed, built and operated.
-                        </p>
-<p class="font-body text-on-surface-variant/80 leading-relaxed">
-                            Agentic AI and AI-ready systems ontology are table stakes for data center facility management in order to handle the array of risk, performance, environmental and energy challenges on both the supply and demand sides.
-                        </p>
-</div>
-</div>
-</div>
-</div>
+
+<!-- IN-DEPTH ANALYSIS SECTION -->
+<section class="py-16 sm:py-24 lg:py-32 relative bg-background">
+  <div class="container mx-auto px-5 sm:px-8">
+    <div class="flex items-center gap-4 mb-12 sm:mb-20">
+      <div class="h-px bg-outline-variant/30 flex-grow"></div>
+      <h2 class="font-headline text-sm tracking-[0.4em] uppercase text-tertiary font-black px-4">Operations</h2>
+      <div class="h-px bg-outline-variant/30 w-24"></div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-px bg-outline-variant/15 overflow-hidden rounded-xl border border-outline-variant/10">
+      <!-- Left Card -->
+      <div class="glass-panel p-8 sm:p-12 lg:p-20 relative group hover:bg-surface-container-high transition-colors duration-500">
+        <div class="absolute top-0 left-0 w-1 h-0 bg-tertiary group-hover:h-full transition-all duration-700"></div>
+        <span class="font-headline text-4xl sm:text-5xl text-primary/20 absolute top-8 sm:top-10 right-8 sm:right-10 select-none">01</span>
+        <div class="max-w-lg">
+          <span class="material-symbols-outlined text-3xl sm:text-4xl text-primary mb-8 sm:mb-10" data-icon="ac_unit">ac_unit</span>
+          <p class="font-body text-xl sm:text-2xl text-on-surface leading-snug font-medium mb-5 sm:mb-6">
+            Design and build with future operational performance in mind.
+          </p>
+          <p class="font-body text-on-surface-variant/80 leading-relaxed">
+            This means more progressive thinking around cooling, varying electrical loads, fire life safety, energy, efficiency, and sustainability as well as changing staffing paradigms. Even the location of edge data centers is a creative exercise when repurposing former real estate use-types.
+          </p>
+        </div>
+      </div>
+      <!-- Right Card -->
+      <div class="glass-panel p-8 sm:p-12 lg:p-20 relative group hover:bg-surface-container-high transition-colors duration-500">
+        <div class="absolute top-0 left-0 w-1 h-0 bg-tertiary group-hover:h-full transition-all duration-700"></div>
+        <span class="font-headline text-4xl sm:text-5xl text-primary/20 absolute top-8 sm:top-10 right-8 sm:right-10 select-none">02</span>
+        <div class="max-w-lg">
+          <span class="material-symbols-outlined text-3xl sm:text-4xl text-primary mb-8 sm:mb-10" data-icon="psychology">psychology</span>
+          <p class="font-body text-xl sm:text-2xl text-on-surface leading-snug font-medium mb-5 sm:mb-6">
+            Artificial intelligence is not only the reason for data center growth, but also the way that data centers should be designed, built and operated.
+          </p>
+          <p class="font-body text-on-surface-variant/80 leading-relaxed">
+            Agentic AI and AI-ready systems ontology are table stakes for data center facility management in order to handle the array of risk, performance, environmental and energy challenges on both the supply and demand sides.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- EXECUTION SECTION: PRECISION AT SCALE -->
-<section class="pb-32 overflow-hidden">
-<div class="container mx-auto px-8">
-<div class="flex flex-col lg:flex-row gap-16 items-center">
-<!-- Visual Component -->
-<div class="w-full lg:w-1/2 relative">
-<div class="absolute -inset-4 border border-tertiary/20 rounded-xl"></div>
-<div class="relative overflow-hidden rounded-lg aspect-square">
-<img class="w-full h-full object-cover" src="hero_racks.png" alt="Data center server rack infrastructure"/>
-<div class="absolute inset-0 bg-primary-container/10 mix-blend-overlay"></div>
-</div>
-</div>
-<!-- Text Component -->
-<div class="w-full lg:w-1/2">
-<div class="flex items-center gap-4 mb-8">
-<span class="w-12 h-0.5 bg-primary"></span>
-<h2 class="font-headline text-3xl md:text-5xl font-bold tracking-tight">Speed, Resilience & Scale</h2>
-</div>
-<div class="space-y-6 text-on-surface-variant font-body leading-relaxed">
-<p>
-                            Our regional and edge data center solutions are built and operated for speed, resilience, and scale. Whether deploying immersion-cooled AI clusters or modular, or BESS, grid-interactive sites, we deliver facilities that perform at the edge with hyperscale precision and consistency.
-                        </p>
-<p>
-                            From site selection and engineering to integrated systems testing (IST) and agentic fault detection, Alosanar provides the strategy, systems, and execution to operate smarter.
-                        </p>
-</div>
-</div>
-</div>
-</div>
+
+<!-- EXECUTION SECTION -->
+<section class="pb-16 sm:pb-24 lg:pb-32 overflow-hidden">
+  <div class="container mx-auto px-5 sm:px-8">
+    <div class="flex flex-col lg:flex-row gap-10 sm:gap-16 items-center">
+      <!-- Visual Component -->
+      <div class="w-full lg:w-1/2 relative">
+        <div class="absolute -inset-4 border border-tertiary/20 rounded-xl"></div>
+        <div class="relative overflow-hidden rounded-lg aspect-square">
+          <img class="w-full h-full object-cover" src="hero_racks.png" alt="Data center server rack infrastructure"/>
+          <div class="absolute inset-0 bg-primary-container/10 mix-blend-overlay"></div>
+        </div>
+      </div>
+      <!-- Text Component -->
+      <div class="w-full lg:w-1/2">
+        <div class="flex items-center gap-4 mb-6 sm:mb-8">
+          <span class="w-8 sm:w-12 h-0.5 bg-primary"></span>
+          <h2 class="font-headline text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight">Speed, Resilience &amp; Scale</h2>
+        </div>
+        <div class="space-y-5 sm:space-y-6 text-on-surface-variant font-body leading-relaxed">
+          <p>
+            Our regional and edge data center solutions are built and operated for speed, resilience, and scale. Whether deploying immersion-cooled AI clusters or modular, or BESS, grid-interactive sites, we deliver facilities that perform at the edge with hyperscale precision and consistency.
+          </p>
+          <p>
+            From site selection and engineering to integrated systems testing (IST) and agentic fault detection, Alosanar provides the strategy, systems, and execution to operate smarter.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- FOOTER SECTION -->
-<footer class="bg-[#0b1326] w-full border-t border-[#414755]/15 mt-24">
-<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-[1920px] mx-auto">
-<div class="mb-8 md:mb-0">
-<div class="font-['Space_Grotesk'] text-lg font-black text-slate-200 uppercase tracking-tighter mb-2">
-                    ALOSANAR
-                </div>
-<p class="font-['Manrope'] text-[12px] uppercase tracking-widest text-slate-500">
-                    © 2024 ALOSANAR INFRASTRUCTURE. ARCHITECTURAL MONOLITH GRADE.
-                </p>
-</div>
-<div class="flex flex-wrap justify-center gap-10">
-<a class="font-['Manrope'] text-[12px] uppercase tracking-[0.2em] text-slate-500 hover:text-[#adc6ff] transition-colors" href="/about.html">About</a>
-<a class="font-['Manrope'] text-[12px] uppercase tracking-[0.2em] text-slate-500 hover:text-[#adc6ff] transition-colors" href="/services.html">Services</a>
-<a class="font-['Manrope'] text-[12px] uppercase tracking-[0.2em] text-slate-500 hover:text-[#adc6ff] transition-colors" href="/energy.html">Energy</a>
-<a class="font-['Manrope'] text-[12px] uppercase tracking-[0.2em] text-slate-500 hover:text-[#adc6ff] transition-colors" href="mailto:contact@alosanar.com">Contact</a>
-</div>
-<div class="mt-8 md:mt-0 flex gap-4">
-<div class="w-8 h-8 rounded-full border border-outline-variant/30 flex items-center justify-center text-slate-500 hover:text-tertiary hover:border-tertiary transition-all cursor-pointer">
-<span class="material-symbols-outlined text-sm" data-icon="language">language</span>
-</div>
-<div class="w-8 h-8 rounded-full border border-outline-variant/30 flex items-center justify-center text-slate-500 hover:text-tertiary hover:border-tertiary transition-all cursor-pointer">
-<span class="material-symbols-outlined text-sm" data-icon="terminal">terminal</span>
-</div>
-</div>
-</div>
+<footer class="bg-[#0b1326] w-full border-t border-[#414755]/15 mt-8 sm:mt-24">
+  <div class="flex flex-col md:flex-row justify-between items-center px-5 sm:px-12 py-12 sm:py-16 w-full max-w-[1920px] mx-auto gap-6 sm:gap-8">
+    <div class="text-center md:text-left">
+      <div class="font-['Space_Grotesk'] text-lg font-black text-slate-200 uppercase tracking-tighter mb-2">
+        ALOSANAR
+      </div>
+      <p class="font-['Manrope'] text-[12px] uppercase tracking-widest text-slate-500">
+        © 2024 ALOSANAR INFRASTRUCTURE. ARCHITECTURAL MONOLITH GRADE.
+      </p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-6 sm:gap-10">
+      <a class="font-['Manrope'] text-[12px] uppercase tracking-[0.2em] text-slate-500 hover:text-[#adc6ff] transition-colors" href="/about.html">About</a>
+      <a class="font-['Manrope'] text-[12px] uppercase tracking-[0.2em] text-slate-500 hover:text-[#adc6ff] transition-colors" href="/services.html">Services</a>
+      <a class="font-['Manrope'] text-[12px] uppercase tracking-[0.2em] text-slate-500 hover:text-[#adc6ff] transition-colors" href="/energy.html">Energy</a>
+      <a class="font-['Manrope'] text-[12px] uppercase tracking-[0.2em] text-slate-500 hover:text-[#adc6ff] transition-colors" href="mailto:contact@alosanar.com">Contact</a>
+    </div>
+    <div class="flex gap-4">
+      <div class="w-8 h-8 rounded-full border border-outline-variant/30 flex items-center justify-center text-slate-500 hover:text-tertiary hover:border-tertiary transition-all cursor-pointer">
+        <span class="material-symbols-outlined text-sm" data-icon="language">language</span>
+      </div>
+      <div class="w-8 h-8 rounded-full border border-outline-variant/30 flex items-center justify-center text-slate-500 hover:text-tertiary hover:border-tertiary transition-all cursor-pointer">
+        <span class="material-symbols-outlined text-sm" data-icon="terminal">terminal</span>
+      </div>
+    </div>
+  </div>
 </footer>
+
+<script>
+  const btn = document.getElementById('hamburger-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => menu.classList.toggle('open'));
+</script>
 </body></html>

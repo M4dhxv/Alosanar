@@ -7,7 +7,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
@@ -97,42 +96,63 @@
         .monolith-gradient {
             background: linear-gradient(135deg, #adc6ff 0%, #4b8eff 100%);
         }
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: flex; }
     </style>
 </head>
 <body class="bg-background selection:bg-primary selection:text-on-primary">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-lg shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(173,198,255,0.05)]">
-<div class="flex justify-between items-center w-full px-8 h-20 max-w-[1440px] mx-auto">
-<a href="/"><img src="logo.png" alt="Alosanar" class="h-12 md:h-16 object-contain max-w-[200px] md:max-w-none mt-1"></a>
-<div class="hidden md:flex items-center gap-10">
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/">Home</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/marketplace.html">Marketplace</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/operations.html">Operations</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/services.html">Services</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold border-b-2 border-blue-200 pb-1" href="/about.html">About</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/energy.html">Energy</a>
-</div>
-</div>
+  <div class="flex justify-between items-center w-full px-5 sm:px-8 h-16 sm:h-20 max-w-[1440px] mx-auto">
+    <a href="/"><img src="logo.png" alt="Alosanar" class="h-10 md:h-14 object-contain max-w-[160px] md:max-w-none mt-1"></a>
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-10">
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/">Home</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/marketplace.html">Marketplace</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/operations.html">Operations</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/services.html">Services</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold border-b-2 border-blue-200 pb-1" href="/about.html">About</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/energy.html">Energy</a>
+    </div>
+    <!-- Hamburger -->
+    <button id="hamburger-btn" class="md:hidden flex flex-col gap-[5px] p-2 rounded focus:outline-none" aria-label="Open menu">
+      <span class="block w-6 h-[2px] bg-blue-200"></span>
+      <span class="block w-6 h-[2px] bg-blue-200"></span>
+      <span class="block w-4 h-[2px] bg-blue-200"></span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden flex-col bg-slate-950/95 backdrop-blur-xl border-t border-slate-800/40">
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/">Home</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/marketplace.html">Marketplace</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/operations.html">Operations</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/services.html">Services</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold px-6 py-4 border-b border-slate-800/30 block" href="/about.html">About</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 block transition-colors" href="/energy.html">Energy</a>
+  </div>
 </nav>
+
 <!-- Hero Section -->
-<section class="relative pt-48 pb-32 px-12 overflow-hidden min-h-screen flex items-center">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-70" src="hero_racks.png" alt="Data center server infrastructure"/>
-<div class="absolute inset-0 bg-gradient-to-r from-surface-dim via-surface-dim/50 to-surface-dim/15"></div>
-<div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_30%,_rgba(75,142,255,0.1)_0%,_transparent_50%)]"></div>
-<div class="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,_rgba(60,215,255,0.05)_0%,_transparent_50%)]"></div>
-</div>
-<div class="relative z-10 max-w-5xl mx-auto">
-<h1 class="font-headline text-[clamp(4rem,10vw,7rem)] leading-[0.9] font-bold tracking-tighter text-on-surface mb-6">
-  About Us
-</h1>
-<p class="font-label text-xs md:text-sm uppercase tracking-[0.35em] text-on-surface-variant font-medium">
-  Next generation data center leadership &amp; innovation
-</p>
-</div>
+<section class="relative pt-28 sm:pt-40 md:pt-48 pb-16 sm:pb-24 lg:pb-32 px-5 sm:px-8 lg:px-12 overflow-hidden min-h-[60vh] sm:min-h-screen flex items-center">
+  <div class="absolute inset-0 z-0">
+    <img class="w-full h-full object-cover opacity-70" src="hero_racks.png" alt="Data center server infrastructure"/>
+    <div class="absolute inset-0 bg-gradient-to-r from-surface-dim via-surface-dim/50 to-surface-dim/15"></div>
+    <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_30%,_rgba(75,142,255,0.1)_0%,_transparent_50%)]"></div>
+    <div class="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,_rgba(60,215,255,0.05)_0%,_transparent_50%)]"></div>
+  </div>
+  <div class="relative z-10 max-w-5xl mx-auto w-full">
+    <h1 class="font-headline text-[clamp(3rem,10vw,7rem)] leading-[0.9] font-bold tracking-tighter text-on-surface mb-4 sm:mb-6">
+      About Us
+    </h1>
+    <p class="font-label text-xs md:text-sm uppercase tracking-[0.35em] text-on-surface-variant font-medium">
+      Next generation data center leadership &amp; innovation
+    </p>
+  </div>
 </section>
-<section class="py-32 px-12 bg-surface-container-low">
-  <div class="max-w-4xl mx-auto space-y-10 font-body text-lg text-on-surface-variant leading-relaxed">
+
+<!-- Body Text -->
+<section class="py-16 sm:py-24 lg:py-32 px-5 sm:px-8 lg:px-12 bg-surface-container-low">
+  <div class="max-w-4xl mx-auto space-y-8 sm:space-y-10 font-body text-base sm:text-lg text-on-surface-variant leading-relaxed">
     <p>
       Alosanar was founded in 2024 by Emmanuel Daniel, former Microsoft global facilities and data center executive. Emmanuel spearheaded the smart buildings program for Microsoft globally including extensive physical, cultural and programmatic redevelopment of the East Campus in Redmond, WA. He notably led expansion of the data center capacity from 200 to 500 facilities while investing up to $2B per month and expanding the global team.
     </p>
@@ -152,28 +172,35 @@
 </section>
 
 <!-- Contact -->
-<section class="py-32 bg-surface relative overflow-hidden">
+<section class="py-16 sm:py-24 lg:py-32 bg-surface relative overflow-hidden">
   <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(75,142,255,0.05)_0%,_transparent_70%)]"></div>
-  <div class="max-w-4xl mx-auto px-12 text-center relative z-10">
-    <h2 class="font-headline text-3xl md:text-5xl mb-8 tracking-tighter text-on-surface">Get in touch.</h2>
-    <a class="inline-flex items-center gap-3 monolith-gradient px-10 py-5 rounded-lg text-on-primary font-headline font-bold uppercase tracking-widest text-sm hover:shadow-[0_0_40px_rgba(173,198,255,0.25)] transition-all" href="mailto:contact@alosanar.com">
-      contact@alosanar.com <span class="material-symbols-outlined text-sm">arrow_forward</span>
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center relative z-10">
+    <h2 class="font-headline text-2xl sm:text-3xl md:text-5xl mb-6 sm:mb-8 tracking-tighter text-on-surface">Get in touch.</h2>
+    <a class="inline-flex items-center gap-3 monolith-gradient px-6 sm:px-10 py-4 sm:py-5 rounded-lg text-on-primary font-headline font-bold uppercase tracking-widest text-sm hover:shadow-[0_0_40px_rgba(173,198,255,0.25)] transition-all break-all sm:break-normal" href="mailto:contact@alosanar.com">
+      contact@alosanar.com <span class="material-symbols-outlined text-sm flex-shrink-0">arrow_forward</span>
     </a>
   </div>
 </section>
+
 <!-- Footer -->
-<footer class="w-full py-16 px-12 bg-[#0b1326] border-t border-[#414755]/15">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
-<div>
-<div class="text-lg font-black text-white mb-2">ALOSANAR</div>
-<div class="font-['Manrope'] text-sm uppercase tracking-widest text-slate-500">© 2024 Alosanar Infrastructure. All rights reserved.</div>
-</div>
-<div class="flex flex-wrap justify-center gap-8 font-['Manrope'] text-sm uppercase tracking-widest">
-<a class="text-slate-500 hover:text-[#3cd7ff] transition-colors" href="/services.html">Services</a>
-<a class="text-slate-500 hover:text-[#3cd7ff] transition-colors" href="/operations.html">Operations</a>
-<a class="text-slate-500 hover:text-[#3cd7ff] transition-colors" href="/energy.html">Energy</a>
-<a class="text-slate-500 hover:text-[#3cd7ff] transition-colors" href="mailto:contact@alosanar.com">Contact</a>
-</div>
-</div>
+<footer class="w-full py-12 sm:py-16 px-5 sm:px-12 bg-[#0b1326] border-t border-[#414755]/15">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
+    <div class="text-center md:text-left">
+      <div class="text-lg font-black text-white mb-2">ALOSANAR</div>
+      <div class="font-['Manrope'] text-sm uppercase tracking-widest text-slate-500">© 2024 Alosanar Infrastructure. All rights reserved.</div>
+    </div>
+    <div class="flex flex-wrap justify-center gap-5 sm:gap-8 font-['Manrope'] text-sm uppercase tracking-widest">
+      <a class="text-slate-500 hover:text-[#3cd7ff] transition-colors" href="/services.html">Services</a>
+      <a class="text-slate-500 hover:text-[#3cd7ff] transition-colors" href="/operations.html">Operations</a>
+      <a class="text-slate-500 hover:text-[#3cd7ff] transition-colors" href="/energy.html">Energy</a>
+      <a class="text-slate-500 hover:text-[#3cd7ff] transition-colors" href="mailto:contact@alosanar.com">Contact</a>
+    </div>
+  </div>
 </footer>
+
+<script>
+  const btn = document.getElementById('hamburger-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => menu.classList.toggle('open'));
+</script>
 </body></html>

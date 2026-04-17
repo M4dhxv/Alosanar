@@ -89,13 +89,9 @@
   .monolith-gradient {
     background: linear-gradient(135deg, #adc6ff 0%, #4b8eff 100%);
   }
-
-  /* Abstract US network map SVG glow */
   .network-glow {
     filter: drop-shadow(0 0 18px rgba(60, 215, 255, 0.35));
   }
-
-  /* Reference link hover */
   .ref-link {
     transition: color 0.2s, border-color 0.2s;
   }
@@ -103,14 +99,17 @@
     color: #3cd7ff;
     border-color: rgba(60,215,255,0.4);
   }
+  #mobile-menu { display: none; }
+  #mobile-menu.open { display: flex; }
 </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
 
 <!-- NAV -->
 <nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-lg shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(173,198,255,0.05)]">
-  <div class="flex justify-between items-center w-full px-8 h-20 max-w-[1440px] mx-auto">
-    <a href="/"><img src="logo.png" alt="Alosanar" class="h-12 md:h-16 object-contain max-w-[200px] md:max-w-none mt-1"></a>
+  <div class="flex justify-between items-center w-full px-5 sm:px-8 h-16 sm:h-20 max-w-[1440px] mx-auto">
+    <a href="/"><img src="logo.png" alt="Alosanar" class="h-10 md:h-14 object-contain max-w-[160px] md:max-w-none mt-1"></a>
+    <!-- Desktop Nav -->
     <div class="hidden md:flex items-center gap-10">
       <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/">Home</a>
       <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold border-b-2 border-blue-200 pb-1" href="/marketplace.html">Marketplace</a>
@@ -119,7 +118,21 @@
       <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/about.html">About</a>
       <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/energy.html">Energy</a>
     </div>
-
+    <!-- Hamburger -->
+    <button id="hamburger-btn" class="md:hidden flex flex-col gap-[5px] p-2 rounded focus:outline-none" aria-label="Open menu">
+      <span class="block w-6 h-[2px] bg-blue-200 transition-all duration-300"></span>
+      <span class="block w-6 h-[2px] bg-blue-200 transition-all duration-300"></span>
+      <span class="block w-4 h-[2px] bg-blue-200 transition-all duration-300"></span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden flex-col bg-slate-950/95 backdrop-blur-xl border-t border-slate-800/40">
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/">Home</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold px-6 py-4 border-b border-slate-800/30 block" href="/marketplace.html">Marketplace</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/operations.html">Operations</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/services.html">Services</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/about.html">About</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 block transition-colors" href="/energy.html">Energy</a>
   </div>
 </nav>
 
@@ -127,44 +140,43 @@
 <main>
 
   <!-- HERO: full-bleed image -->
-  <header class="relative min-h-screen flex items-end pb-24 pt-20 overflow-hidden bg-surface-container-lowest">
+  <header class="relative min-h-screen flex items-end pb-16 sm:pb-24 pt-16 sm:pt-20 overflow-hidden bg-surface-container-lowest">
     <div class="absolute inset-0 z-0">
       <img class="w-full h-full object-cover opacity-95" src="hero_corridor.png" alt="Data center server rack corridor — edge compute infrastructure"/>
       <div class="absolute inset-0 bg-gradient-to-r from-[#060e20] via-[#060e20]/50 to-[#060e20]/10"></div>
       <div class="absolute inset-0 bg-gradient-to-t from-[#060e20] via-transparent to-transparent"></div>
     </div>
-    <div class="relative z-10 max-w-[1440px] mx-auto px-8 w-full">
-      <div class="inline-flex items-center gap-3 mb-8">
-        <span class="w-12 h-[2px] bg-tertiary"></span>
+    <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 w-full">
+      <div class="inline-flex items-center gap-3 mb-6 sm:mb-8">
+        <span class="w-8 sm:w-12 h-[2px] bg-tertiary"></span>
         <span class="font-label text-[10px] uppercase tracking-[0.3em] text-tertiary font-bold">Edge &amp; Regional</span>
       </div>
-      <h1 class="font-headline text-[3.5rem] md:text-[5.5rem] leading-[1.05] tracking-tighter text-on-surface mb-6">Marketplace</h1>
-      <p class="max-w-2xl font-body text-xl text-on-surface-variant leading-relaxed">
+      <h1 class="font-headline text-[2.5rem] sm:text-[3.5rem] md:text-[5.5rem] leading-[1.05] tracking-tighter text-on-surface mb-4 sm:mb-6">Marketplace</h1>
+      <p class="max-w-2xl font-body text-base sm:text-xl text-on-surface-variant leading-relaxed">
         While hyperscale data centers dominate headlines, there is also substantial demand for edge and regional data center capacity.
       </p>
     </div>
-    <div class="absolute bottom-12 right-8 flex items-center gap-4 z-10">
-      <div class="font-label text-[10px] uppercase tracking-widest text-outline">Distributed Compute</div>
+    <div class="absolute bottom-8 sm:bottom-12 right-5 sm:right-8 flex items-center gap-4 z-10">
+      <div class="font-label text-[10px] uppercase tracking-widest text-outline hidden sm:block">Distributed Compute</div>
       <div class="w-2 h-2 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_#3cd7ff]"></div>
     </div>
   </header>
 
-  <!-- BODY: split layout with copy + network map -->
-  <!-- BODY: copy + proper map -->
-  <section class="py-24 bg-surface border-b border-outline-variant/10">
-    <div class="max-w-[1440px] mx-auto px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+  <!-- BODY: copy + map -->
+  <section class="py-16 sm:py-24 bg-surface border-b border-outline-variant/10">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-start">
         <!-- Left: text -->
         <div class="lg:pt-8">
-          <span class="font-label text-[10px] uppercase tracking-[0.3em] text-tertiary mb-6 block font-bold">Edge & Regional</span>
-          <h2 class="font-headline text-4xl md:text-5xl leading-tight tracking-tighter text-on-surface mb-8">The Case for Edge</h2>
-          <p class="font-body text-lg text-on-surface-variant leading-relaxed">
+          <span class="font-label text-[10px] uppercase tracking-[0.3em] text-tertiary mb-4 sm:mb-6 block font-bold">Edge &amp; Regional</span>
+          <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl leading-tight tracking-tighter text-on-surface mb-6 sm:mb-8">The Case for Edge</h2>
+          <p class="font-body text-base sm:text-lg text-on-surface-variant leading-relaxed">
             While hyperscale data centers dominate headlines, there is also substantial demand for edge and regional data center capacity to support AI inference, data privacy requirements, and low-latency performance for real-time applications such as autonomous systems, robotics, financial services, video analytics, healthcare, government workloads, and 5G/6G networks.
           </p>
         </div>
         <!-- Right: Leaflet map -->
         <div class="relative">
-          <div id="dc-map" style="height:480px;border-radius:12px;overflow:hidden;"></div>
+          <div id="dc-map" style="height:320px;border-radius:12px;overflow:hidden;" class="sm:!h-[480px]"></div>
         </div>
       </div>
     </div>
@@ -177,18 +189,16 @@
     document.addEventListener('DOMContentLoaded', function() {
       var map = L.map('dc-map', {
         center: [38.5, -96],
-        zoom: 4,
+        zoom: 3,
         zoomControl: true,
         scrollWheelZoom: false,
         attributionControl: false
       });
 
-      // Dark tile layer (CartoDB Dark Matter)
       L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
         maxZoom: 19
       }).addTo(map);
 
-      // Custom marker icon
       function makeIcon(color, size) {
         return L.divIcon({
           className: '',
@@ -203,7 +213,6 @@
       var minorIcon = makeIcon('#adc6ff', 9);
 
       var cities = [
-        // Major hubs
         { name: 'New York', lat: 40.71, lng: -74.01, major: true },
         { name: 'Los Angeles', lat: 34.05, lng: -118.24, major: true },
         { name: 'Chicago', lat: 41.88, lng: -87.63, major: true },
@@ -212,7 +221,6 @@
         { name: 'Seattle', lat: 47.61, lng: -122.33, major: true },
         { name: 'Atlanta', lat: 33.75, lng: -84.39, major: true },
         { name: 'San Francisco Bay', lat: 37.77, lng: -122.42, major: true },
-        // Secondary
         { name: 'Phoenix', lat: 33.45, lng: -112.07, major: false },
         { name: 'Denver', lat: 39.74, lng: -104.98, major: false },
         { name: 'Minneapolis', lat: 44.98, lng: -93.27, major: false },
@@ -249,58 +257,56 @@
     }
   </style>
 
-
-  <!-- REFERENCE LINKS GRID (matching live site's link grid) -->
-  <section class="py-20 bg-surface-container-lowest relative">
-    <!-- Subtle glow background -->
+  <!-- REFERENCE LINKS GRID -->
+  <section class="py-16 sm:py-20 bg-surface-container-lowest relative">
     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,_rgba(60,215,255,0.04)_0%,_transparent_65%)]"></div>
-    <div class="max-w-[1440px] mx-auto px-8 relative z-10">
+    <div class="max-w-[1440px] mx-auto px-5 sm:px-8 relative z-10">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-outline-variant/10">
         <a href="https://www.jll.com/en-us/newsroom/global-edge-data-center-market-to-cross-300-billion-dollar-by-2026"
            target="_blank" rel="noopener"
-           class="ref-link p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
-          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-4 block transition-colors">open_in_new</span>
+           class="ref-link p-6 sm:p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
+          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-3 sm:mb-4 block transition-colors">open_in_new</span>
           <div class="font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em] text-on-surface-variant group-hover:text-tertiary transition-colors font-bold">Edge Growth</div>
         </a>
 
         <a href="#"
-           class="ref-link p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
-          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-4 block transition-colors">location_city</span>
+           class="ref-link p-6 sm:p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
+          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-3 sm:mb-4 block transition-colors">location_city</span>
           <div class="font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em] text-on-surface-variant group-hover:text-tertiary transition-colors font-bold">Friendly DC Community</div>
         </a>
 
         <a href="https://www.eetimes.com/the-ai-future-is-now-all-about-the-edge/"
            target="_blank" rel="noopener"
-           class="ref-link p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
-          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-4 block transition-colors">open_in_new</span>
+           class="ref-link p-6 sm:p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
+          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-3 sm:mb-4 block transition-colors">open_in_new</span>
           <div class="font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em] text-on-surface-variant group-hover:text-tertiary transition-colors font-bold">AI Is All About the Edge</div>
         </a>
 
         <a href="https://finance.yahoo.com/news/north-america-edge-data-center-162700212.html"
            target="_blank" rel="noopener"
-           class="ref-link p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
-          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-4 block transition-colors">open_in_new</span>
+           class="ref-link p-6 sm:p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
+          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-3 sm:mb-4 block transition-colors">open_in_new</span>
           <div class="font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em] text-on-surface-variant group-hover:text-tertiary transition-colors font-bold">Edge DC Market Size</div>
         </a>
 
         <a href="https://www.youtube.com/watch?v=VJcCQ4fkWts"
            target="_blank" rel="noopener"
-           class="ref-link p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
-          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-4 block transition-colors">play_circle</span>
+           class="ref-link p-6 sm:p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
+          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-3 sm:mb-4 block transition-colors">play_circle</span>
           <div class="font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em] text-on-surface-variant group-hover:text-tertiary transition-colors font-bold">AI RAN</div>
         </a>
 
         <a href="https://www.openpr.com/news/4273074/edge-data-center-market-set-to-surge-key-insights-you-must-know"
            target="_blank" rel="noopener"
-           class="ref-link p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
-          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-4 block transition-colors">open_in_new</span>
+           class="ref-link p-6 sm:p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
+          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-3 sm:mb-4 block transition-colors">open_in_new</span>
           <div class="font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em] text-on-surface-variant group-hover:text-tertiary transition-colors font-bold">Data Center Market Surge</div>
         </a>
 
         <a href="https://www.forbes.com/sites/delltechnologies/2026/01/23/the-rise-of-distributed-data-centers-in-the-ai-era/"
            target="_blank" rel="noopener"
-           class="ref-link p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
-          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-4 block transition-colors">open_in_new</span>
+           class="ref-link p-6 sm:p-8 bg-surface-container-lowest border border-outline-variant/10 hover:bg-surface-container group">
+          <span class="material-symbols-outlined text-outline group-hover:text-tertiary text-xl mb-3 sm:mb-4 block transition-colors">open_in_new</span>
           <div class="font-['Space_Grotesk'] text-xs uppercase tracking-[0.2em] text-on-surface-variant group-hover:text-tertiary transition-colors font-bold">More Distributed Compute</div>
         </a>
       </div>
@@ -310,13 +316,13 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="bg-slate-950 w-full py-16 border-t border-slate-800/50">
-  <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
-    <div class="flex flex-col items-center md:items-start gap-4">
+<footer class="bg-slate-950 w-full py-12 sm:py-16 border-t border-slate-800/50">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
+    <div class="flex flex-col items-center md:items-start gap-3 sm:gap-4">
       <div class="text-xl font-bold text-blue-200 font-['Space_Grotesk']">Alosanar</div>
       <div class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500">© 2026, Alosanar. All Rights Reserved.</div>
     </div>
-    <div class="flex flex-wrap justify-center gap-8 font-['Manrope'] text-[10px] uppercase tracking-[0.2em]">
+    <div class="flex flex-wrap justify-center gap-5 sm:gap-8 font-['Manrope'] text-[10px] uppercase tracking-[0.2em]">
       <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/">Home</a>
       <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/operations.html">Operations</a>
       <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/services.html">Services</a>
@@ -326,5 +332,11 @@
     </div>
   </div>
 </footer>
+
+<script>
+  const btn = document.getElementById('hamburger-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => menu.classList.toggle('open'));
+</script>
 
 </body></html>

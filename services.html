@@ -3,9 +3,9 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Data Center Services | Alosanar</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -90,129 +90,156 @@
         body {
             background-color: #0b1326;
             color: #dae2fd;
+            overflow-x: hidden;
         }
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: flex; }
     </style>
 </head>
 <body class="font-body selection:bg-primary selection:text-on-primary-container">
-<!-- Section 1: HEADER -->
-<header class="fixed top-0 w-full z-50 bg-[#0b1326] bg-opacity-60 backdrop-blur-xl bg-gradient-to-b from-[#131b2e] to-transparent shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(173,198,255,0.05)]">
+<!-- NAV -->
 <nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-lg shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(173,198,255,0.05)]">
-<div class="flex justify-between items-center w-full px-8 h-20 max-w-[1440px] mx-auto">
-<a href="/"><img src="logo.png" alt="Alosanar" class="h-12 md:h-16 object-contain max-w-[200px] md:max-w-none mt-1"></a>
-<div class="hidden md:flex items-center gap-10">
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/">Home</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/marketplace.html">Marketplace</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/operations.html">Operations</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold border-b-2 border-blue-200 pb-1" href="/services.html">Services</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/about.html">About</a>
-<a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/energy.html">Energy</a>
-</div>
-</div>
+  <div class="flex justify-between items-center w-full px-5 sm:px-8 h-16 sm:h-20 max-w-[1440px] mx-auto">
+    <a href="/"><img src="logo.png" alt="Alosanar" class="h-10 md:h-14 object-contain max-w-[160px] md:max-w-none mt-1"></a>
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-10">
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/">Home</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/marketplace.html">Marketplace</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/operations.html">Operations</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold border-b-2 border-blue-200 pb-1" href="/services.html">Services</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/about.html">About</a>
+      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/energy.html">Energy</a>
+    </div>
+    <!-- Hamburger -->
+    <button id="hamburger-btn" class="md:hidden flex flex-col gap-[5px] p-2 rounded focus:outline-none" aria-label="Open menu">
+      <span class="block w-6 h-[2px] bg-blue-200"></span>
+      <span class="block w-6 h-[2px] bg-blue-200"></span>
+      <span class="block w-4 h-[2px] bg-blue-200"></span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden flex-col bg-slate-950/95 backdrop-blur-xl border-t border-slate-800/40">
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/">Home</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/marketplace.html">Marketplace</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/operations.html">Operations</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold px-6 py-4 border-b border-slate-800/30 block" href="/services.html">Services</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/about.html">About</a>
+    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 block transition-colors" href="/energy.html">Energy</a>
+  </div>
 </nav>
-</header>
+
 <main>
-<!-- Section 2: PAGE HERO -->
-<section class="relative h-[90vh] min-h-[600px] flex items-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-95" src="hero_racks.png" alt="Server rack blade close-up — data center infrastructure"/>
-<div class="absolute inset-0 bg-gradient-to-r from-surface/80 via-surface/40 to-transparent"></div>
-</div>
-<div class="relative z-10 px-12 max-w-7xl">
-<div class="mb-6 flex items-center gap-3">
-<span class="h-[2px] w-12 bg-tertiary"></span>
-<span class="font-label text-label-md text-tertiary tracking-[0.2em] uppercase"></span>
-</div>
-<h1 class="font-headline text-[3.5rem] md:text-[5rem] leading-[1.1] font-bold tracking-tight text-on-surface mb-8 max-w-4xl">
-                    Data Center Solutions
-                </h1>
-<p class="font-body text-body-lg text-on-surface-variant max-w-2xl leading-relaxed opacity-80">
-                    Alosanar is operating in a variety of capacities, including consulting, design, construction management, BESS solutions, financing and joint venture partnerships.
-                </p>
-</div>
-</section>
-<section class="py-32 px-12 bg-surface">
-<div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-outline-variant/10">
-  <!-- Card 1 -->
-  <div class="glass-card group p-12 flex flex-col gap-8 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
-    <span class="material-symbols-outlined text-primary text-4xl">explore</span>
-    <h3 class="font-headline text-2xl font-bold text-on-surface tracking-tight">Data Center Strategy</h3>
-  </div>
-  <!-- Card 2 -->
-  <div class="glass-card group p-12 flex flex-col gap-8 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
-    <span class="material-symbols-outlined text-primary text-4xl">payments</span>
-    <h3 class="font-headline text-2xl font-bold text-on-surface tracking-tight">Project Financing</h3>
-  </div>
-  <!-- Card 3 -->
-  <div class="glass-card group p-12 flex flex-col gap-8 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
-    <span class="material-symbols-outlined text-primary text-4xl">architecture</span>
-    <h3 class="font-headline text-2xl font-bold text-on-surface tracking-tight">Engineering &amp; Design</h3>
-  </div>
-  <!-- Card 4 -->
-  <div class="glass-card group p-12 flex flex-col gap-8 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
-    <span class="material-symbols-outlined text-primary text-4xl">account_tree</span>
-    <h3 class="font-headline text-2xl font-bold text-on-surface tracking-tight">Project Management</h3>
-  </div>
-  <!-- Card 5 -->
-  <div class="glass-card group p-12 flex flex-col gap-8 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
-    <span class="material-symbols-outlined text-primary text-4xl">battery_charging_full</span>
-    <h3 class="font-headline text-2xl font-bold text-on-surface tracking-tight">Battery (BESS)</h3>
-  </div>
-  <!-- Card 6 -->
-  <div class="glass-card group p-12 flex flex-col gap-8 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
-    <span class="material-symbols-outlined text-primary text-4xl">settings_suggest</span>
-    <h3 class="font-headline text-2xl font-bold text-on-surface tracking-tight">Operations</h3>
-  </div>
-</div>
-</div>
-</section>
+  <!-- PAGE HERO -->
+  <section class="relative min-h-[60vh] sm:h-[90vh] sm:min-h-[600px] flex items-center overflow-hidden pt-16 sm:pt-0">
+    <div class="absolute inset-0 z-0">
+      <img class="w-full h-full object-cover opacity-95" src="hero_racks.png" alt="Server rack blade close-up — data center infrastructure"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-surface/80 via-surface/40 to-transparent"></div>
+    </div>
+    <div class="relative z-10 px-5 sm:px-12 max-w-7xl w-full mt-8 sm:mt-0">
+      <div class="mb-5 sm:mb-6 flex items-center gap-3">
+        <span class="h-[2px] w-8 sm:w-12 bg-tertiary"></span>
+        <span class="font-label text-tertiary tracking-[0.2em] uppercase text-xs"></span>
+      </div>
+      <h1 class="font-headline text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] leading-[1.1] font-bold tracking-tight text-on-surface mb-6 sm:mb-8 max-w-4xl">
+        Data Center Solutions
+      </h1>
+      <p class="font-body text-base sm:text-lg text-on-surface-variant max-w-2xl leading-relaxed opacity-80">
+        Alosanar is operating in a variety of capacities, including consulting, design, construction management, BESS solutions, financing and joint venture partnerships.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section class="py-16 sm:py-24 lg:py-32 px-5 sm:px-12 bg-surface">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-outline-variant/10">
+        <!-- Card 1 -->
+        <div class="glass-card group p-8 sm:p-12 flex flex-col gap-6 sm:gap-8 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+          <span class="material-symbols-outlined text-primary text-3xl sm:text-4xl">explore</span>
+          <h3 class="font-headline text-xl sm:text-2xl font-bold text-on-surface tracking-tight">Data Center Strategy</h3>
+        </div>
+        <!-- Card 2 -->
+        <div class="glass-card group p-8 sm:p-12 flex flex-col gap-6 sm:gap-8 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+          <span class="material-symbols-outlined text-primary text-3xl sm:text-4xl">payments</span>
+          <h3 class="font-headline text-xl sm:text-2xl font-bold text-on-surface tracking-tight">Project Financing</h3>
+        </div>
+        <!-- Card 3 -->
+        <div class="glass-card group p-8 sm:p-12 flex flex-col gap-6 sm:gap-8 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+          <span class="material-symbols-outlined text-primary text-3xl sm:text-4xl">architecture</span>
+          <h3 class="font-headline text-xl sm:text-2xl font-bold text-on-surface tracking-tight">Engineering &amp; Design</h3>
+        </div>
+        <!-- Card 4 -->
+        <div class="glass-card group p-8 sm:p-12 flex flex-col gap-6 sm:gap-8 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+          <span class="material-symbols-outlined text-primary text-3xl sm:text-4xl">account_tree</span>
+          <h3 class="font-headline text-xl sm:text-2xl font-bold text-on-surface tracking-tight">Project Management</h3>
+        </div>
+        <!-- Card 5 -->
+        <div class="glass-card group p-8 sm:p-12 flex flex-col gap-6 sm:gap-8 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+          <span class="material-symbols-outlined text-primary text-3xl sm:text-4xl">battery_charging_full</span>
+          <h3 class="font-headline text-xl sm:text-2xl font-bold text-on-surface tracking-tight">Battery (BESS)</h3>
+        </div>
+        <!-- Card 6 -->
+        <div class="glass-card group p-8 sm:p-12 flex flex-col gap-6 sm:gap-8 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-[2px] bg-tertiary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+          <span class="material-symbols-outlined text-primary text-3xl sm:text-4xl">settings_suggest</span>
+          <h3 class="font-headline text-xl sm:text-2xl font-bold text-on-surface tracking-tight">Operations</h3>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
-<!-- Section 4: FOOTER -->
-<footer class="bg-[#0b1326] w-full py-16 px-12 border-t border-[#414755]/15">
-<div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-<div class="col-span-1 md:col-span-1">
-<div class="text-xl font-bold text-[#adc6ff] mb-2 font-headline">ALOSANAR</div>
-</div>
-<div>
-<h4 class="font-headline text-[#adc6ff] mb-6 text-sm font-bold uppercase tracking-widest">Solutions</h4>
-<ul class="space-y-4 font-['Manrope'] text-[0.75rem] uppercase tracking-widest">
-<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="/marketplace.html">Marketplace</a></li>
-<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="/operations.html">Operations</a></li>
-<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="/energy.html">Energy</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-headline text-[#adc6ff] mb-6 text-sm font-bold uppercase tracking-widest">Expertise</h4>
-<ul class="space-y-4 font-['Manrope'] text-[0.75rem] uppercase tracking-widest">
-<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="/about.html">About</a></li>
-<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="mailto:contact@alosanar.com">Contact</a></li>
-<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="/operations.html">Operations</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-headline text-[#adc6ff] mb-6 text-sm font-bold uppercase tracking-widest">Legal</h4>
-<ul class="space-y-4 font-['Manrope'] text-[0.75rem] uppercase tracking-widest">
-<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="/about.html">Company</a></li>
-<li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="mailto:contact@alosanar.com">Email</a></li>
-</ul>
-</div>
-</div>
-<div class="mt-20 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="font-['Manrope'] text-[0.75rem] uppercase tracking-widest text-[#414755]">
-                    © 2024 ALOSANAR INFRASTRUCTURE. ALL RIGHTS RESERVED.
-                </div>
-<div class="flex gap-8 opacity-80 hover:opacity-100 transition-opacity">
-<a class="material-symbols-outlined text-[#adc6ff]" data-icon="language" href="/">language</a>
-<a class="material-symbols-outlined text-[#adc6ff]" data-icon="share" href="mailto:contact@alosanar.com">share</a>
-</div>
-</div>
-</div>
+
+<!-- FOOTER -->
+<footer class="bg-[#0b1326] w-full py-12 sm:py-16 px-5 sm:px-12 border-t border-[#414755]/15">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12">
+      <div class="col-span-1 sm:col-span-2 md:col-span-1">
+        <div class="text-xl font-bold text-[#adc6ff] mb-2 font-headline">ALOSANAR</div>
+      </div>
+      <div>
+        <h4 class="font-headline text-[#adc6ff] mb-4 sm:mb-6 text-sm font-bold uppercase tracking-widest">Solutions</h4>
+        <ul class="space-y-3 sm:space-y-4 font-['Manrope'] text-[0.75rem] uppercase tracking-widest">
+          <li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="/marketplace.html">Marketplace</a></li>
+          <li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="/operations.html">Operations</a></li>
+          <li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="/energy.html">Energy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-headline text-[#adc6ff] mb-4 sm:mb-6 text-sm font-bold uppercase tracking-widest">Expertise</h4>
+        <ul class="space-y-3 sm:space-y-4 font-['Manrope'] text-[0.75rem] uppercase tracking-widest">
+          <li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="/about.html">About</a></li>
+          <li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="mailto:contact@alosanar.com">Contact</a></li>
+          <li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="/operations.html">Operations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-headline text-[#adc6ff] mb-4 sm:mb-6 text-sm font-bold uppercase tracking-widest">Legal</h4>
+        <ul class="space-y-3 sm:space-y-4 font-['Manrope'] text-[0.75rem] uppercase tracking-widest">
+          <li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="/about.html">Company</a></li>
+          <li><a class="text-[#414755] hover:text-[#3cd7ff] transition-colors" href="mailto:contact@alosanar.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-12 sm:mt-20 pt-6 sm:pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="font-['Manrope'] text-[0.75rem] uppercase tracking-widest text-[#414755]">
+        © 2024 ALOSANAR INFRASTRUCTURE. ALL RIGHTS RESERVED.
+      </div>
+      <div class="flex gap-8 opacity-80 hover:opacity-100 transition-opacity">
+        <a class="material-symbols-outlined text-[#adc6ff]" data-icon="language" href="/">language</a>
+        <a class="material-symbols-outlined text-[#adc6ff]" data-icon="share" href="mailto:contact@alosanar.com">share</a>
+      </div>
+    </div>
+  </div>
 </footer>
+
+<script>
+  const btn = document.getElementById('hamburger-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => menu.classList.toggle('open'));
+</script>
 </body></html>
