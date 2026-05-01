@@ -1,73 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Operations | Alosanar</title>
 <link rel="stylesheet" href="style.css"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          primary: '#adc6ff', tertiary: '#3cd7ff', background: '#0b1326',
+          'on-background': '#dae2fd', 'on-surface-variant': '#c1c6d7',
+          'outline-variant': '#414755', 'surface-container-high': '#222a3d'
+        }
+      }
+    }
+  }
+</script>
 <style>
-.ops-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  overflow: hidden;
-}
-.ops-card {
-  background: rgba(34,42,61,0.62);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  padding: 40px 30px;
-  transition: background 0.5s ease;
-}
-.ops-card:hover {
-  background: #222a3d;
-}
-@media(max-width: 980px) {
-  .ops-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media(max-width: 680px) {
-  .ops-grid { grid-template-columns: 1fr; }
-  .ops-card { padding: 30px 20px; }
-}
+.material-symbols-outlined {font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+.glass-panel {background: rgba(49,57,77,0.4); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px)}
 </style>
 </head>
 <body>
 <nav class="nav" id="nav"><div class="nav-inner"><a class="nav-logo" href="index.html"><img src="logo.png" alt="Alosanar"/></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="marketplace.html">Marketplace</a></li><li><a href="energy.html">Energy</a></li><li><a href="services.html">Services</a></li><li><a href="operations.html" class="active">Operations</a></li><li><a href="about.html">About</a></li></ul><button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
 <div class="nav-mob" id="mob"><a href="index.html">Home</a><a href="marketplace.html">Marketplace</a><a href="energy.html">Energy</a><a href="services.html">Services</a><a href="operations.html" class="active">Operations</a><a href="about.html">About</a></div>
 
-<section class="hero">
-  <div class="hero-bg"><img src="hero_home_new.png" alt=""/></div>
-  <div class="hero-content">
-    <h1>Operations</h1>
-  </div>
-</section>
+<section class="hero"><div class="hero-bg"><img src="hero_home_new.png" alt=""/></div><div class="hero-content"><h1>Operations</h1></div></section>
 
-<hr class="divider"/>
-
-<div class="wrap">
-  <div class="sect" style="padding-top:44px;padding-bottom:54px">
-    <div class="ops-grid">
-      <div class="ops-card">
-        <div class="body-text" style="font-size:17px;line-height:1.86;color:#c7d6e4">
-          <p>Today’s data centers should be designed and built with future operational performance in mind, and much more dynamic capabilities, economics and vision. This means more progressive thinking around cooling, varying electrical loads, fire life safety, energy, efficiency, and sustainability as well as changing staffing paradigms. Even the location of edge data centers is a creative exercise when repurposing former real estate use-types.</p>
+<section class="pt-6 pb-16 sm:pt-6 sm:pb-20 lg:pt-6 lg:pb-24 relative bg-background">
+  <div class="container mx-auto px-5 sm:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-px bg-outline-variant/15 overflow-hidden rounded-xl border border-outline-variant/10">
+      <div class="glass-panel p-8 sm:p-12 lg:p-20 relative group hover:bg-surface-container-high transition-colors duration-500">
+        <div class="absolute top-0 left-0 w-1 h-0 bg-tertiary group-hover:h-full transition-all duration-700"></div>
+        <div class="max-w-lg">
+          <span class="material-symbols-outlined text-3xl sm:text-4xl text-primary mb-8 sm:mb-10">ac_unit</span>
+          <p class="font-['Manrope'] text-on-surface-variant/80 leading-relaxed text-lg">Today’s data centers should be designed and built with future operational performance in mind, and much more dynamic capabilities, economics and vision. This means more progressive thinking around cooling, varying electrical loads, fire life safety, energy, efficiency, and sustainability as well as changing staffing paradigms. Even the location of edge data centers is a creative exercise when repurposing former real estate use-types.</p>
         </div>
       </div>
-      <div class="ops-card">
-        <div class="body-text" style="font-size:17px;line-height:1.86;color:#c7d6e4">
-          <p>Artificial intelligence is not only the reason for data center growth, but also the way that data center should be designed built and operated. Agentic AI and AI-ready systems ontology are table stakes for data center facility management in order to handle the array of risk, performance, environmental and energy challenges on both the supply and demand sides.</p>
+      <div class="glass-panel p-8 sm:p-12 lg:p-20 relative group hover:bg-surface-container-high transition-colors duration-500">
+        <div class="absolute top-0 left-0 w-1 h-0 bg-tertiary group-hover:h-full transition-all duration-700"></div>
+        <div class="max-w-lg">
+          <span class="material-symbols-outlined text-3xl sm:text-4xl text-primary mb-8 sm:mb-10">psychology</span>
+          <p class="font-['Manrope'] text-on-surface-variant/80 leading-relaxed text-lg">Artificial intelligence is not only the reason for data center growth, but also the way that data center should be designed built and operated. Agentic AI and AI-ready systems ontology are table stakes for data center facility management in order to handle the array of risk, performance, environmental and energy challenges on both the supply and demand sides.</p>
         </div>
       </div>
-      <div class="ops-card">
-        <div class="body-text" style="font-size:17px;line-height:1.86;color:#c7d6e4">
-          <p>Our regional and edge data center solutions are built and operated for speed, resilience, and scale. Whether deploying immersion-cooled AI clusters or modular, or BESS, grid-interactive sites, we deliver facilities that perform at the edge with hyperscale precision and consistency. From site selection and engineering to integrated systems testing (IST) and agentic fault detection, Alosanar provides the strategy, systems, and execution to operate smarter.</p>
+      <div class="glass-panel p-8 sm:p-12 lg:p-20 relative group hover:bg-surface-container-high transition-colors duration-500">
+        <div class="absolute top-0 left-0 w-1 h-0 bg-tertiary group-hover:h-full transition-all duration-700"></div>
+        <div class="max-w-lg">
+          <span class="material-symbols-outlined text-3xl sm:text-4xl text-primary mb-8 sm:mb-10">tune</span>
+          <p class="font-['Manrope'] text-on-surface-variant/80 leading-relaxed text-lg">Our regional and edge data center solutions are built and operated for speed, resilience, and scale. Whether deploying immersion-cooled AI clusters or modular, or BESS, grid-interactive sites, we deliver facilities that perform at the edge with hyperscale precision and consistency. From site selection and engineering to integrated systems testing (IST) and agentic fault detection, Alosanar provides the strategy, systems, and execution to operate smarter.</p>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <hr class="divider"/>
 <footer><div class="foot"><span class="foot-copy">© 2026, Alosanar. All Rights Reserved.</span><ul class="foot-links"><li><a href="index.html">Home</a></li><li><a href="marketplace.html">Marketplace</a></li><li><a href="energy.html">Energy</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li></ul></div></footer>
