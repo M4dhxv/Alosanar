@@ -21,7 +21,8 @@ body{background:var(--bg);color:var(--text);font-family:'Montserrat',sans-serif;
 a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%}
 
-.nav{position:fixed;top:0;left:0;right:0;z-index:200;width:100%;height:82px;border:none;background:rgba(7,16,30,.16);backdrop-filter:none;-webkit-backdrop-filter:none;border-radius:0;padding:0 30px;display:flex;align-items:center}
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;width:100%;height:82px;border:none;background:rgba(7,16,30,.16);backdrop-filter:none;-webkit-backdrop-filter:none;border-radius:0;padding:0 30px;display:flex;align-items:center;transition:background .3s ease,transform .3s ease}
+.nav.hidden{transform:translateY(-100%)}
 .nav.scrolled{background:rgba(7,16,30,.38)}
 .nav-inner{width:100%;max-width:1320px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{display:flex;align-items:center}

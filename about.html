@@ -18,6 +18,6 @@
 
 <hr class="divider"/>
 <footer><div class="foot"><span class="foot-copy">© 2026, Alosanar. All Rights Reserved.</span><ul class="foot-links"><li><a href="index.html">Home</a></li><li><a href="marketplace.html">Marketplace</a></li><li><a href="energy.html">Energy</a></li><li><a href="services.html">Services</a></li><li><a href="operations.html">Operations</a></li></ul></div></footer>
-<script>const nav=document.getElementById('nav'),burger=document.getElementById('burger'),mob=document.getElementById('mob');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>20));burger.addEventListener('click',()=>mob.classList.toggle('open'));</script>
+<script>const nav=document.getElementById('nav'),burger=document.getElementById('burger'),mob=document.getElementById('mob');let lastScroll=0;window.addEventListener('scroll',()=>{const s=window.scrollY;nav.classList.toggle('scrolled',s>20);if(s>lastScroll&&s>80){nav.classList.add('hidden')}else{nav.classList.remove('hidden')}lastScroll=s;});burger.addEventListener('click',()=>mob.classList.toggle('open'));</script>
 </body>
 </html>
