@@ -1,241 +1,39 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
+<html lang="en">
+<head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Alosanar | The Architectural Monolith</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary": "#3cd7ff",
-                    "surface-container-highest": "#2d3449",
-                    "on-primary-container": "#00285c",
-                    "surface-variant": "#2d3449",
-                    "secondary-fixed": "#d5e3fc",
-                    "error": "#ffb4ab",
-                    "on-tertiary-container": "#002e3a",
-                    "tertiary-container": "#009ebe",
-                    "on-secondary-fixed": "#0d1c2e",
-                    "on-secondary-fixed-variant": "#3a485b",
-                    "surface-container-high": "#222a3d",
-                    "on-error": "#690005",
-                    "inverse-surface": "#dae2fd",
-                    "surface-bright": "#31394d",
-                    "on-tertiary-fixed-variant": "#004e5f",
-                    "surface-container-low": "#131b2e",
-                    "on-surface": "#dae2fd",
-                    "on-error-container": "#ffdad6",
-                    "surface-dim": "#0b1326",
-                    "on-surface-variant": "#c1c6d7",
-                    "on-secondary-container": "#abb9d1",
-                    "primary-container": "#4b8eff",
-                    "inverse-primary": "#005bc1",
-                    "surface-container": "#171f33",
-                    "primary-fixed-dim": "#adc6ff",
-                    "on-secondary": "#233144",
-                    "inverse-on-surface": "#283044",
-                    "secondary-container": "#3c4a5e",
-                    "outline": "#8b90a0",
-                    "on-tertiary": "#003642",
-                    "tertiary-fixed-dim": "#3cd7ff",
-                    "surface-tint": "#adc6ff",
-                    "surface-container-lowest": "#060e20",
-                    "primary": "#adc6ff",
-                    "on-primary-fixed-variant": "#004493",
-                    "on-background": "#dae2fd",
-                    "surface": "#0b1326",
-                    "on-primary-fixed": "#001a41",
-                    "secondary-fixed-dim": "#b9c7df",
-                    "outline-variant": "#414755",
-                    "primary-fixed": "#d8e2ff",
-                    "tertiary-fixed": "#b4ebff",
-                    "secondary": "#b9c7df",
-                    "background": "#0b1326",
-                    "on-primary": "#002e69",
-                    "error-container": "#93000a",
-                    "on-tertiary-fixed": "#001f27"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": ["Space Grotesk"],
-                    "body": ["Manrope"],
-                    "label": ["Manrope"]
-            }
-          }
-        }
-      }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .monolith-gradient {
-            background: linear-gradient(135deg, #adc6ff 0%, #4b8eff 100%);
-        }
-        .obsidian-glass {
-            background: rgba(49, 57, 77, 0.6);
-            backdrop-filter: blur(24px);
-        }
-        /* Mobile menu */
-        #mobile-menu {
-            display: none;
-        }
-        #mobile-menu.open {
-            display: flex;
-        }
-        .hamburger-line {
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-        body { overflow-x: hidden; }
-    </style>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Alosanar</title>
+<link rel="stylesheet" href="style.css"/>
 </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
-<!-- 1. HEADER (TopNavBar) -->
-<nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-lg shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(173,198,255,0.05)]">
-<div class="flex justify-between items-center w-full px-5 sm:px-8 h-16 sm:h-20 max-w-[1440px] mx-auto">
-  <a href="/"><img src="logo.png" alt="Alosanar" class="h-10 md:h-14 object-contain max-w-[160px] md:max-w-none mt-1"></a>
-  <!-- Desktop Nav -->
-  <div class="hidden md:flex items-center gap-10">
-    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold border-b-2 border-blue-200 pb-1" href="/">Home</a>
-    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/marketplace.html">Marketplace</a>
-    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/operations.html">Operations</a>
-    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/services.html">Services</a>
-    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/about.html">About</a>
-    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/energy.html">Energy</a>
+<body>
+<nav class="nav" id="nav"><div class="nav-inner"><a class="nav-logo" href="index.html"><img src="logo.png" alt="Alosanar"/></a><ul class="nav-links"><li><a href="index.html" class="active">Home</a></li><li><a href="marketplace.html">Marketplace</a></li><li><a href="energy.html">Energy</a></li><li><a href="services.html">Services</a></li><li><a href="operations.html">Operations</a></li><li><a href="about.html">About</a></li></ul><button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<div class="nav-mob" id="mob"><a href="index.html" class="active">Home</a><a href="marketplace.html">Marketplace</a><a href="energy.html">Energy</a><a href="services.html">Services</a><a href="operations.html">Operations</a><a href="about.html">About</a></div>
+
+<section class="hero" style="min-height:100vh;height:100vh;max-height:none;padding-top:92px">
+  <div class="hero-bg"><img src="Hero.png" alt=""/></div>
+  <div class="hero-content">
+    <div style="max-width:50vw;min-width:320px">
+      <h1 style="font-size:clamp(1.9rem,4vw,3.8rem);line-height:1.08;max-width:680px">Alosanar provides the next generation of regional and edge data center design, development and operations.</h1>
+    </div>
+    <a class="btn" href="about.html">Find out more about us</a>
   </div>
-  <!-- Hamburger Button -->
-  <button id="hamburger-btn" class="md:hidden flex flex-col gap-[5px] p-2 rounded focus:outline-none" aria-label="Open menu">
-    <span class="hamburger-line block w-6 h-[2px] bg-blue-200"></span>
-    <span class="hamburger-line block w-6 h-[2px] bg-blue-200"></span>
-    <span class="hamburger-line block w-4 h-[2px] bg-blue-200"></span>
-  </button>
-</div>
-<!-- Mobile Menu Dropdown -->
-<div id="mobile-menu" class="md:hidden flex-col gap-0 bg-slate-950/95 backdrop-blur-xl border-t border-slate-800/40">
-  <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold px-6 py-4 border-b border-slate-800/30 block" href="/">Home</a>
-  <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/marketplace.html">Marketplace</a>
-  <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/operations.html">Operations</a>
-  <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/services.html">Services</a>
-  <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/about.html">About</a>
-  <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 block transition-colors" href="/energy.html">Energy</a>
-</div>
-</nav>
-<!-- 2. HERO SECTION -->
-<header class="relative min-h-screen flex items-center pt-16 sm:pt-20 overflow-hidden bg-surface-container-lowest">
-<!-- Background Imagery Treatment -->
-<div class="absolute inset-0 z-0">
-  <img class="w-full h-full object-cover opacity-95" src="hero_facility.png" alt="Hyperscale data center facility hall"/>
-  <div class="absolute inset-0 bg-gradient-to-r from-surface-dim via-surface-dim/50 to-transparent"></div>
-</div>
-<div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
-  <div class="lg:col-span-8 flex flex-col justify-center">
-    <div class="inline-flex items-center gap-3 mb-6 sm:mb-8">
-      <span class="w-8 sm:w-12 h-[2px] bg-tertiary"></span>
-      <span class="font-label text-[10px] uppercase tracking-[0.3em] text-tertiary font-bold"></span>
-    </div>
-    <h1 class="font-headline text-[2.2rem] sm:text-[3.5rem] md:text-[5rem] leading-[1.1] mb-8 -ml-0.5 sm:-ml-1 tracking-tighter text-on-surface">
-      Alosanar provides the <span class="text-primary italic">next generation</span> of regional and edge data center design, development and operations.
-    </h1>
-    <div class="mt-2 flex flex-wrap gap-4 sm:gap-6">
-      <a class="monolith-gradient px-6 sm:px-8 py-4 sm:py-5 rounded-lg text-on-primary font-headline font-bold uppercase tracking-widest text-sm inline-flex items-center gap-3" href="mailto:contact@alosanar.com">
-        Contact Us <span class="material-symbols-outlined text-sm">arrow_forward</span>
-      </a>
-    </div>
-  </div>
-</div>
-<!-- Bottom Section Indicator -->
-<div class="absolute bottom-8 sm:bottom-12 right-5 sm:right-8 flex items-center gap-4">
-  <div class="font-label text-[10px] uppercase tracking-widest text-outline hidden sm:block"></div>
-  <div class="w-2 h-2 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_#3cd7ff]"></div>
-</div>
-</header>
-<!-- 4. ABOUT US SECTION -->
-<section class="py-16 sm:py-24 lg:py-32 bg-surface-container-lowest">
-<div class="max-w-[1440px] mx-auto px-5 sm:px-8">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-20 items-center">
-    <!-- Left: image -->
-    <div class="overflow-hidden rounded-xl">
-      <img class="w-full object-cover aspect-video" src="hero_operations.png" alt="Data center infrastructure"/>
-    </div>
-    <!-- Right: text -->
-    <div>
-      <span class="font-label text-[10px] uppercase tracking-[0.3em] text-tertiary mb-4 block font-bold">About</span>
-      <h2 class="font-headline text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-8 leading-tight tracking-tighter">Reimagining Global Scale.</h2>
-      <div class="space-y-5 sm:space-y-6">
-        <p class="font-body text-base sm:text-lg text-on-surface-variant leading-relaxed">
-          Being "next generation", means flexibility and scaling in all disciplines including design and construction, delivery logistics, energy supply, telecom, capital, cybersecurity, operations and governance. Legacy models and vendors are no longer right for the times.
-        </p>
-        <p class="font-body text-base sm:text-lg text-on-surface-variant leading-relaxed">
-          With experience in development and operations of hundreds of data centers in thirty countries, we reimagined the outdated, legacy process and built a company that can scale instantly and continually with both internal resources and on-demand, global partners through retainer agreements.
-        </p>
-        <p class="font-body text-base sm:text-lg text-on-surface-variant leading-relaxed">
-          This provides <span class="text-primary font-semibold">unconstrained delivery capacity</span> and unconflicted flexibility for our clients.
-        </p>
+</section>
+
+<hr class="divider"/>
+<div class="wrap">
+  <div class="sect" style="padding-top:44px;padding-bottom:54px">
+    <div style="max-width:1100px">
+      <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#93c5fd;margin-bottom:14px">About Us</div>
+      <div class="body-text" style="max-width:1020px;font-size:17px;line-height:1.86;color:#c7d6e4">
+        <p>Being "next generation", means flexibility and scaling in all disciplines including design and construction, delivery logistics, energy supply, telecom, capital, cybersecurity, operations and governance. Legacy models and vendors are no longer right for the times.</p>
+        <p style="margin-top:14px">With experience in development and operations of hundreds of data centers in thirty countries, we reimagined the outdated, legacy process and built a company that can scale instantly and continually with both internal resources and on-demand, global partners through retainer agreements. This provides unconstrained delivery capacity and unconflicted flexibility for our clients.</p>
       </div>
     </div>
   </div>
 </div>
-</section>
-<!-- 5. CTA / CONTACT SECTION -->
-<section class="py-16 sm:py-24 lg:py-32 bg-surface relative overflow-hidden">
-<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(75,142,255,0.05)_0%,_transparent_70%)]"></div>
-<div class="max-w-5xl mx-auto px-5 sm:px-8 text-center relative z-10">
-  <h2 class="font-headline text-2xl sm:text-3xl md:text-5xl mb-6 sm:mb-8 tracking-tighter text-on-surface">Get in touch.</h2>
-  <a class="inline-flex items-center gap-3 monolith-gradient px-6 sm:px-10 py-4 sm:py-5 rounded-lg text-on-primary font-headline font-bold uppercase tracking-widest text-sm hover:shadow-[0_0_40px_rgba(173,198,255,0.25)] transition-all break-all sm:break-normal" href="mailto:contact@alosanar.com">
-    contact@alosanar.com <span class="material-symbols-outlined text-sm flex-shrink-0">arrow_forward</span>
-  </a>
-</div>
-</section>
-<!-- 6. FOOTER -->
-<footer class="bg-slate-950 w-full py-12 sm:py-16 border-t border-slate-800/50">
-<div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
-  <div class="flex flex-col items-center md:items-start gap-3 sm:gap-4">
-    <div class="text-xl font-bold text-blue-200 font-['Space_Grotesk']">
-      Alosanar Infrastructure.
-    </div>
-    <div class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500 opacity-80 hover:opacity-100">
-      © 2026, Alosanar. All Rights Reserved.
-    </div>
-  </div>
-  <div class="flex flex-wrap justify-center gap-5 sm:gap-8">
-    <a class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500 hover:text-blue-300 transition-colors" href="/marketplace.html">Marketplace</a>
-    <a class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500 hover:text-blue-300 transition-colors" href="/operations.html">Operations</a>
-    <a class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500 hover:text-blue-300 transition-colors" href="/services.html">Services</a>
-    <a class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500 hover:text-blue-300 transition-colors" href="/energy.html">Energy</a>
-    <a class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500 hover:text-blue-300 transition-colors" href="/about.html">About</a>
-    <a class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500 hover:text-blue-300 transition-colors" href="mailto:contact@alosanar.com">Contact</a>
-  </div>
-  <div class="flex gap-4">
-    <div class="w-8 h-8 rounded bg-slate-900 flex items-center justify-center hover:bg-slate-800 transition-all cursor-pointer">
-      <span class="material-symbols-outlined text-sm text-blue-200">lan</span>
-    </div>
-    <div class="w-8 h-8 rounded bg-slate-900 flex items-center justify-center hover:bg-slate-800 transition-all cursor-pointer">
-      <span class="material-symbols-outlined text-sm text-blue-200">terminal</span>
-    </div>
-  </div>
-</div>
-<div class="mt-8 sm:mt-12 text-center">
-  <div class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-800">
-    The Architectural Monolith
-  </div>
-</div>
-</footer>
-<script>
-  const btn = document.getElementById('hamburger-btn');
-  const menu = document.getElementById('mobile-menu');
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('open');
-  });
-</script>
-</body></html>
+<hr class="divider"/>
+<footer><div class="foot"><span class="foot-copy">© 2026, Alosanar. All Rights Reserved.</span><ul class="foot-links"><li><a href="marketplace.html">Marketplace</a></li><li><a href="energy.html">Energy</a></li><li><a href="services.html">Services</a></li><li><a href="operations.html">Operations</a></li><li><a href="about.html">About</a></li></ul></div></footer>
+<script>const nav=document.getElementById('nav'),burger=document.getElementById('burger'),mob=document.getElementById('mob');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>20));burger.addEventListener('click',()=>mob.classList.toggle('open'));</script>
+</body>
+</html>

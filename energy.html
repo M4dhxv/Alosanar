@@ -1,214 +1,28 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
+<html lang="en">
+<head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Energy | Alosanar</title>
-<meta name="description" content="Alosanar has assembled a large and growing portfolio of properties providing access to gigawatts of available power capacity throughout the US and the world."/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-          "tertiary": "#3cd7ff",
-          "surface-container-highest": "#2d3449",
-          "on-primary-container": "#00285c",
-          "surface-variant": "#2d3449",
-          "secondary-fixed": "#d5e3fc",
-          "error": "#ffb4ab",
-          "on-tertiary-container": "#002e3a",
-          "tertiary-container": "#009ebe",
-          "on-secondary-fixed": "#0d1c2e",
-          "on-secondary-fixed-variant": "#3a485b",
-          "surface-container-high": "#222a3d",
-          "on-error": "#690005",
-          "inverse-surface": "#dae2fd",
-          "surface-bright": "#31394d",
-          "on-tertiary-fixed-variant": "#004e5f",
-          "surface-container-low": "#131b2e",
-          "on-surface": "#dae2fd",
-          "on-error-container": "#ffdad6",
-          "surface-dim": "#0b1326",
-          "on-surface-variant": "#c1c6d7",
-          "on-secondary-container": "#abb9d1",
-          "primary-container": "#4b8eff",
-          "inverse-primary": "#005bc1",
-          "surface-container": "#171f33",
-          "primary-fixed-dim": "#adc6ff",
-          "on-secondary": "#233144",
-          "inverse-on-surface": "#283044",
-          "secondary-container": "#3c4a5e",
-          "outline": "#8b90a0",
-          "on-tertiary": "#003642",
-          "tertiary-fixed-dim": "#3cd7ff",
-          "surface-tint": "#adc6ff",
-          "surface-container-lowest": "#060e20",
-          "primary": "#adc6ff",
-          "on-primary-fixed-variant": "#004493",
-          "on-background": "#dae2fd",
-          "surface": "#0b1326",
-          "on-primary-fixed": "#001a41",
-          "secondary-fixed-dim": "#b9c7df",
-          "outline-variant": "#414755",
-          "primary-fixed": "#d8e2ff",
-          "tertiary-fixed": "#b4ebff",
-          "secondary": "#b9c7df",
-          "background": "#0b1326",
-          "on-primary": "#002e69",
-          "error-container": "#93000a",
-          "on-tertiary-fixed": "#001f27"
-        },
-        "borderRadius": {
-          "DEFAULT": "0.125rem",
-          "lg": "0.25rem",
-          "xl": "0.5rem",
-          "full": "0.75rem"
-        },
-        "fontFamily": {
-          "headline": ["Space Grotesk"],
-          "body": ["Manrope"],
-          "label": ["Manrope"]
-        }
-      }
-    }
-  }
-</script>
-<style>
-  body {
-    background-color: #0b1326;
-    color: #dae2fd;
-    font-family: 'Manrope', sans-serif;
-    overflow-x: hidden;
-  }
-  .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-  }
-  .monolith-gradient {
-    background: linear-gradient(135deg, #adc6ff 0%, #4b8eff 100%);
-  }
-  .glass-panel {
-    background: rgba(23, 31, 51, 0.75);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-  }
-  .img-reveal {
-    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  .img-reveal:hover {
-    transform: scale(1.03);
-  }
-  #mobile-menu { display: none; }
-  #mobile-menu.open { display: flex; }
-</style>
+<link rel="stylesheet" href="style.css"/>
 </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<body>
+<nav class="nav" id="nav"><div class="nav-inner"><a class="nav-logo" href="index.html"><img src="logo.png" alt="Alosanar"/></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="marketplace.html">Marketplace</a></li><li><a href="energy.html" class="active">Energy</a></li><li><a href="services.html">Services</a></li><li><a href="operations.html">Operations</a></li><li><a href="about.html">About</a></li></ul><button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<div class="nav-mob" id="mob"><a href="index.html">Home</a><a href="marketplace.html">Marketplace</a><a href="energy.html" class="active">Energy</a><a href="services.html">Services</a><a href="operations.html">Operations</a><a href="about.html">About</a></div>
 
-<!-- NAV -->
-<nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-lg shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(173,198,255,0.05)]">
-  <div class="flex justify-between items-center w-full px-5 sm:px-8 h-16 sm:h-20 max-w-[1440px] mx-auto">
-    <a href="/"><img src="logo.png" alt="Alosanar" class="h-10 md:h-14 object-contain max-w-[160px] md:max-w-none mt-1"></a>
-    <!-- Desktop Nav -->
-    <div class="hidden md:flex items-center gap-10">
-      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/">Home</a>
-      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/marketplace.html">Marketplace</a>
-      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/operations.html">Operations</a>
-      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/services.html">Services</a>
-      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 transition-colors" href="/about.html">About</a>
-      <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold border-b-2 border-blue-200 pb-1" href="/energy.html">Energy</a>
-    </div>
-    <!-- Hamburger -->
-    <button id="hamburger-btn" class="md:hidden flex flex-col gap-[5px] p-2 rounded focus:outline-none" aria-label="Open menu">
-      <span class="block w-6 h-[2px] bg-blue-200"></span>
-      <span class="block w-6 h-[2px] bg-blue-200"></span>
-      <span class="block w-4 h-[2px] bg-blue-200"></span>
-    </button>
-  </div>
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden flex-col bg-slate-950/95 backdrop-blur-xl border-t border-slate-800/40">
-    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/">Home</a>
-    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/marketplace.html">Marketplace</a>
-    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/operations.html">Operations</a>
-    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/services.html">Services</a>
-    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-slate-400 hover:text-blue-100 px-6 py-4 border-b border-slate-800/30 block transition-colors" href="/about.html">About</a>
-    <a class="font-['Space_Grotesk'] uppercase tracking-widest text-xs text-blue-200 font-bold px-6 py-4 block" href="/energy.html">Energy</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<header class="relative min-h-screen flex items-end pb-16 sm:pb-24 pt-16 sm:pt-20 overflow-hidden bg-surface-container-lowest">
-  <div class="absolute inset-0 z-0">
-    <img class="w-full h-full object-cover opacity-85 img-reveal" src="energy_power_lines.png" alt="High voltage transmission lines"/>
-    <div class="absolute inset-0 bg-gradient-to-r from-[#060e20] via-[#060e20]/60 to-[#060e20]/15"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-[#060e20] via-transparent to-transparent"></div>
-  </div>
-  <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 w-full">
-    <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-3 mb-6 sm:mb-8">
-        <span class="w-8 sm:w-12 h-[2px] bg-tertiary"></span>
-        <span class="font-label text-[10px] uppercase tracking-[0.3em] text-tertiary font-bold">Grid Infrastructure</span>
-      </div>
-      <h1 class="font-headline text-[2.5rem] sm:text-[3.5rem] md:text-[5.5rem] leading-[1.05] mb-6 sm:mb-8 tracking-tighter text-on-surface">
-        Energy
-      </h1>
-    </div>
-  </div>
-  <!-- pulse indicator -->
-  <div class="absolute bottom-8 sm:bottom-12 right-5 sm:right-8 flex items-center gap-4 z-10">
-    <div class="font-label text-[10px] uppercase tracking-widest text-outline hidden sm:block">Available Grid + Connectivity</div>
-    <div class="w-2 h-2 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_#3cd7ff]"></div>
-  </div>
-</header>
-
-<!-- BODY COPY -->
-<section class="py-16 sm:py-24 lg:py-32 bg-surface">
-  <div class="max-w-[1440px] mx-auto px-5 sm:px-8">
-    <div class="max-w-3xl space-y-6 sm:space-y-8 font-body text-base sm:text-xl text-on-surface-variant leading-relaxed">
-      <p>
-        The well publicized energy concerns stemming from data center demands leave out a very big mitigating factor. While there are energy constraints for some greenfield projects and projects with very specific location requirements, the reality is there are gigawatts worth of available power scattered about in disparate buildings and properties throughout the US and the world. This includes both immediate connectivity and available grid capacity that is untapped.
-      </p>
-      <p class="border-l-2 border-primary pl-5 sm:pl-6 text-on-surface">
-        We have assembled a large and growing portfolio of properties through site rights, referrals, lease or purchase that provide access to this available capacity.
-      </p>
+<section class="hero" style="min-height:700px;height:86vh;max-height:860px">
+  <div class="hero-bg"><img src="energy_clean_grid.png" alt=""/></div>
+  <div class="hero-content">
+    <div style="max-width:740px">
+      <h1>Energy</h1>
+      <p class="hero-sub">The well publicized energy concerns stemming from data center demands leave out a very big mitigating factor. While there are energy constraints for some greenfield projects and projects with very specific location requirements, the reality is there are gigawatts worth of available power scattered about in disparate buildings and properties throughout the US and the world. This includes both immediate connectivity and available grid capacity that is untapped.</p>
+      <p class="hero-sub">We have assembled a large and growing portfolio of properties through site rights, referrals, lease or purchase that provide access to this available capacity.</p>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="py-16 sm:py-24 lg:py-32 bg-surface relative overflow-hidden">
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(75,142,255,0.05)_0%,_transparent_70%)]"></div>
-  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center relative z-10">
-    <h2 class="font-headline text-2xl sm:text-3xl md:text-5xl font-bold tracking-tighter mb-6 sm:mb-8 text-on-surface">Connect with us to explore available capacity.</h2>
-    <a class="inline-flex items-center gap-3 monolith-gradient px-6 sm:px-10 py-4 sm:py-5 rounded-lg text-on-primary font-headline font-bold uppercase tracking-widest text-sm hover:shadow-[0_0_40px_rgba(173,198,255,0.25)] transition-all break-all sm:break-normal" href="mailto:contact@alosanar.com">
-      contact@alosanar.com <span class="material-symbols-outlined text-sm flex-shrink-0">arrow_forward</span>
-    </a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-slate-950 w-full py-12 sm:py-16 border-t border-slate-800/50">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
-    <div class="flex flex-col items-center md:items-start gap-3 sm:gap-4">
-      <div class="text-xl font-bold text-blue-200 font-['Space_Grotesk']">Alosanar</div>
-      <div class="font-['Manrope'] text-[10px] uppercase tracking-[0.2em] text-slate-500">© 2026, Alosanar. All Rights Reserved.</div>
-    </div>
-    <div class="flex flex-wrap justify-center gap-5 sm:gap-8 font-['Manrope'] text-[10px] uppercase tracking-[0.2em]">
-      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/">Home</a>
-      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/marketplace.html">Marketplace</a>
-      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/operations.html">Operations</a>
-      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/services.html">Services</a>
-      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="/about.html">About</a>
-      <a class="text-slate-500 hover:text-blue-300 transition-colors" href="mailto:contact@alosanar.com">Contact</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  const btn = document.getElementById('hamburger-btn');
-  const menu = document.getElementById('mobile-menu');
-  btn.addEventListener('click', () => menu.classList.toggle('open'));
-</script>
-
-</body></html>
+<hr class="divider"/>
+<footer><div class="foot"><span class="foot-copy">© 2026, Alosanar. All Rights Reserved.</span><ul class="foot-links"><li><a href="index.html">Home</a></li><li><a href="marketplace.html">Marketplace</a></li><li><a href="services.html">Services</a></li><li><a href="operations.html">Operations</a></li><li><a href="about.html">About</a></li></ul></div></footer>
+<script>const nav=document.getElementById('nav'),burger=document.getElementById('burger'),mob=document.getElementById('mob');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>20));burger.addEventListener('click',()=>mob.classList.toggle('open'));</script>
+</body>
+</html>
