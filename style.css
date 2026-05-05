@@ -45,7 +45,7 @@ img{display:block;max-width:100%}
 .hero-content{position:relative;z-index:1;max-width:1320px;margin:0 auto;width:100%;padding:0 30px}
 .eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#93c5fd;margin-bottom:14px}
 .hero h1{position:relative;margin-left:-14px;padding-left:14px;font-size:clamp(2.4rem,4.5vw,4.2rem);font-weight:300;line-height:1.05;letter-spacing:-.02em;max-width:980px}
-.hero h1::before{content:'';position:absolute;left:0;top:-0.05em;width:2px;height:1.15em;background:var(--accent)}
+.hero h1::before{content:'';position:absolute;left:0;top:0;width:2px;height:100%;background:var(--accent)}
 .hero-sub{font-size:clamp(0.95rem,1.15vw,1.2rem);font-weight:300;color:#d0dcea;max-width:880px;margin-top:16px;line-height:1.65}
 .btn{margin-top:22px;display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;background:var(--accent);color:#fff;border:none;border-radius:3px;font-size:15px;font-weight:500;transition:background .2s ease,transform .2s ease}
 .btn:hover{background:#4a90e2}
